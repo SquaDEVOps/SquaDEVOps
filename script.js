@@ -7,7 +7,7 @@ import { renderModal } from './modules/modal/modal.js';
 const renderDef = render_def();
 const workItems = WorkItems();
 const renderRankings = renderAllRankings();
-const modal = renderModal();
+//const modal = renderModal();
 
 /* CALL SLIDES */
 GenerateSlide('mySlides', 'dot', '.prev-arrow', '.next-arrow');
