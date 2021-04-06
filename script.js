@@ -13,5 +13,3 @@ const renderRankings = renderAllRankings();
 GenerateSlide('mySlides', 'dot', '.prev-arrow', '.next-arrow');
 GenerateSlide('projectSlides', 'pj-dot', '.pj-prev-arrow', '.pj-next-arrow');
 
-
-
