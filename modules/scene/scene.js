@@ -76,7 +76,7 @@ loader.load( '/SquaDEVOps/smartCity/scene.gltf', function ( gltf ) {
 
     console.error( e );
 
-} );
+});
 
 function render() {
     requestAnimationFrame(render);
