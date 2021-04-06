@@ -76,7 +76,7 @@ loader.load( '/smartCity/scene.gltf', function ( gltf ) {
 
     console.error( e );
 
-} );
+});
 
 function render() {
     requestAnimationFrame(render);
