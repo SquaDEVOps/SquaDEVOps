@@ -57,6 +57,11 @@ function renderModal(){
         modalOpener.forEach(clicker => {
             clicker.addEventListener('click', e => {
                 activateModal();
+
+                var emmitModal = document.createEvent('Event');
+                emmitModal.initEvent('ModalLoaded', true, true);
+                document.dispatchEvent(emmitModal);
+
             });
         });
 
@@ -65,6 +70,7 @@ function renderModal(){
                 inactivateModal();
             });
         });
+
 
     });
 }

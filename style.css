@@ -537,7 +537,6 @@ a{
 
 .quarto-bloco .cards-box .card .see_more{
     color: #494752;
-    height:auto;
     margin-bottom: 71px;
 }
 
@@ -592,6 +591,7 @@ a{
     font-size: 20px;
 }
 .quarto-bloco .cards-box .card:hover .see_more{
+    height:auto;
     opacity: 1;
 }
 .quarto-bloco .cards-box .card:hover {
