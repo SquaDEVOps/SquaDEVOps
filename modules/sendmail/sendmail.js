@@ -5,6 +5,7 @@ document.addEventListener('ModalLoaded', e => {
     let discord = document.querySelector('.fieldDiscord');
     let subject = "Participante Squad";
     let data = {};
+    let myHeaders = new Headers();
     
     form.addEventListener('submit', e => {
         e.preventDefault();
@@ -19,16 +20,26 @@ document.addEventListener('ModalLoaded', e => {
             fieldname,
             discord
         }
+
+        myHeaders.append("Content-Type", "application/json");
+
+        var myInit = { method: 'POST',
+               headers: myHeaders,
+               mode: 'cors',
+               cache: 'default' };
     
-        axios.post('https://squadops.herokuapp.com/email', data, { headers: {
-            'Content-Type': 'application/json'
-        }})
-        .then(function (response) {
+    
+        var myRequest = new Request('https://squadops.herokuapp.com/email', myInit);
+
+        fetch(myRequest)
+        .then(function(response) {
             console.log(response);
         })
-        .catch(function (error) {
+        .then(function(error) {
             console.log(error);
         });
+            
+
     
     });
 });
