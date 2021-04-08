@@ -26,9 +26,9 @@
                     </ul>
                 </div>
                 <div class="mobile-menu">
-                    <a class="button-menu" onclick='openNav()'>&#9776;</a>
+                    <a class="button-menu activate-menu">&#9776;</a>
                     <div id="myNav" class="overlay">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="javascript:void(0)" class="closebtn close-menu">&times;</a>
                         <div class="overlay-content">
                             <li><a href="#">A Squad</a></li>
                             <li><a href="#">Ranqueadas</a></li>
@@ -435,16 +435,7 @@
             <span><strong>2021 SquadDevOps</strong> Todos os direitos reservados.</span>
         </div>
     </footer>
-
-        <script>
-            function openNav() {
-                document.getElementById("myNav").style.width = "100%";
-            }
-
-            function closeNav() {
-                document.getElementById("myNav").style.width = "0%";
-            }
-        </script>
+    
         <script src="./modules/axios/axios.min.js"></script>
         <script src="./modules/sendmail/sendmail.js"></script>
         <script src="script.js" type="module" charset="utf-8"></script>
@@ -457,7 +448,5 @@
         <script src="./modules/orbitcontrols/OrbitControls.js"></script>
         <script src="./modules/scene/scene.js"></script>
 
-
-        
     </body>
 </html>
