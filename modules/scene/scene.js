@@ -49,14 +49,14 @@ dirLight.position.set( 5, 2, 8 );
 scene.add( dirLight );
 
 // envmap
-const path = '/SquaDEVOps/smartCity/textures/';
+const path = '/smartCity/textures/';
 const format = '.jpg';
 const envMap = new THREE.CubeTextureLoader().load( [
     path + 'Texture-base-gloss-jpg_baseColor' + format
 ] );
 
 const loader = new THREE.GLTFLoader();
-loader.load( '/SquaDEVOps/smartCity/scene.gltf', function ( gltf ) {
+loader.load( '/smartCity/scene.gltf', function ( gltf ) {
 
     const model = gltf.scene;
     const matrix = new THREE.Matrix4();
