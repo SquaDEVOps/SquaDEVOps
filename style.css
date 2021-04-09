@@ -1304,6 +1304,31 @@ footer .direitos span {
     position: relative;
 }
 
+.modal-controller .modal-content .form-content .spin svg{
+    width: 40%;
+    height: 40%;
+    animation: rotateShake 6s infinite ease-in-out;
+}
+
+.modal-controller .modal-content .form-content .spin.hidden{
+    transition: all .25s;
+    opacity:0;
+}
+
+.modal-controller .modal-content .form-content .spin{
+    transition: all .25s;
+    position: absolute;
+    pointer-events: none;
+    width: 102%;
+    height: 100%;
+    background:white;
+    z-index: 9;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
 .modal-controller .modal-content .form-content:before{
     content:'';
     width: 105%;

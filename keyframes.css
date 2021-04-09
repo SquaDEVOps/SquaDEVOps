@@ -1,3 +1,24 @@
+@keyframes rotateShake{
+	0%{
+		transform:rotate(-15deg);
+	}
+	50%{
+		transform:rotate(360deg);
+	}
+
+	55%{
+		transform:rotate(300deg);
+	}
+
+	60%{
+		transform:rotate(360deg);
+	}
+
+	100%{
+		transform:rotate(-15deg);
+	}
+}
+
 @keyframes levelUp{
     0%   {
 		transform: translateY(0);
