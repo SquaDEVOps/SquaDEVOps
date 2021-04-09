@@ -1553,3 +1553,26 @@ footer .direitos span {
         right: 10%;
     }
 }
+
+
+
+/* Page protifolio */
+
+.projects {
+    background-image: linear-gradient(to bottom, var(--default-black), var(--color-fifth));
+    display: flex;
+    flex-direction: column;
+    /* height: 80vh; */
+    padding: 10% 0 0; 
+}
+
+.projects iframe {
+    height: 55vh;
+    width: 45vw;
+}
+
+.projects .projectsCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
