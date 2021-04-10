@@ -100,7 +100,7 @@ document.addEventListener('ModalLoaded', e => {
                         };
     
                     
-                        var myRequest = new Request('https://squadops.herokuapp.com/email', myInit);
+                        var myRequest = new Request('http://localhost:3000/email', myInit);
             
                         fetch(myRequest)
                         .then(function(response) {
