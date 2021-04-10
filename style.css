@@ -3,7 +3,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Source+Code+Pro:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 
-:root{
+/* :root{
+    --color-default: #ccc;
+    --color-second: tomato;
+    --color-third: white;
+    --color-fourth: #f06135;
+    --color-fifth: #dc3441;
+    --color-fifthc: #f33745;
+    --color-sixth: #ff4755;
+    --color-seventh: #d1313d;
+    --color-eighth: #4b4957;
+    --color-nineth: #fff5e0;
+    --color-tenth: #403f50;
+    --color-tenthl: #e8e8e8;
+    --color-eleventh: #db6036;
+    --logo-default-size: 75px;
+    --button-default-background:#49e832;
+    --default-black: #2a2b2f;
+    
+    --font-bebas: 'Bebas Neue', cursive;
+    --font-ubuntu: 'Ubuntu Condensed', sans-serif;
+} */
+
+body[data-color-mode="dark"]{
+    --color-default: #ccc;
+    --color-second: tomato;
+    --color-third: white;
+    --color-fourth: #f06135;
+    --color-fifth: #dc3441;
+    --color-fifthc: #f33745;
+    --color-sixth: #ff4755;
+    --color-seventh: #d1313d;
+    --color-eighth: #4b4957;
+    --color-nineth: #fff5e0;
+    --color-tenth: #403f50;
+    --color-tenthl: #e8e8e8;
+    --color-eleventh: #db6036;
+    --logo-default-size: 75px;
+    --button-default-background:#49e832;
+    --default-black: #2a2b2f;
+
+    /* FONTS CONTROLLER */
+    --font-bebas: 'Bebas Neue', cursive;
+    --font-ubuntu: 'Ubuntu Condensed', sans-serif;
+}
+
+body[data-color-mode="light"]{
     --color-default: #ccc;
     --color-second: tomato;
     --color-third: white;
