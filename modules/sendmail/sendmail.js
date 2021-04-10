@@ -29,13 +29,33 @@ document.addEventListener('ModalLoaded', e => {
         }
     })();
 
+
+    var autoClose = (function(){
+        function init(){
+            let modalC = document.querySelector('#modal-controller');
+            document.body.classList.remove('form-visible');
+            modalC.classList.add('inactive');
+            modalC.classList.remove('active');
+        }
+        return {
+            init:init
+        }
+    })();
+
     let resultForm = function(classResp, messageResp){
         let responseBlock = document.createElement('div');
-        Object.assign(responseBlock, {className: classResp, innerHTML: `<p class="${classResp}"> ${messageResp} </p>`});
+        Object.assign(responseBlock, {className: classResp, innerHTML: `<p class="${classResp}-paragraph"> ${messageResp} </p>`});
 
             setTimeout(() => {
                 responseBlock.classList.add('hidden');
-            }, 2500);
+                setTimeout(() => {
+                    responseBlock.remove();
+                    if(classResp == 'messageSuccess'){
+                        autoClose.init();
+                        location.reload();
+                    }
+                }, 600);
+            }, 6500);
 
         form.append(responseBlock);
     }
@@ -48,57 +68,74 @@ document.addEventListener('ModalLoaded', e => {
         showSpin.init();
 
 
-           
+        if(fieldname != undefined && fieldmail != undefined && discord != undefined){
+            
             fieldnameV = fieldname.value;
             fieldmailV = fieldmail.value;
             discordV = discord.value;
 
             if(fieldnameV != undefined && fieldmailV != undefined && discordV != undefined){
-                
-                data = {
-                    subject: subject + ': ' + fieldnameV,
-                    fieldmail: fieldmailV,
-                    fieldname: fieldnameV,
-                    discord: discordV
-                }
+
+                    if(fieldnameV != '' && fieldmailV != ''){
+
+                        if(discordV == ''){
+                            discordV = 'N/A';
+                        }
     
-                myHeaders.append("Origin", location.href);
-                myHeaders.append("Content-Type", "application/json");
-    
-                var myInit = { method: 'POST',
-                    headers: myHeaders,
-                    mode: 'cors',
-                    cache: 'default',
-                    body: JSON.stringify(data)
-                };
+                        data = {
+                            subject: subject + ': ' + fieldnameV,
+                            fieldmail: fieldmailV,
+                            fieldname: fieldnameV,
+                            discord: discordV
+                        }
             
+                        myHeaders.append("Origin", location.href);
+                        myHeaders.append("Content-Type", "application/json");
+    
+                        var myInit = { method: 'POST',
+                            headers: myHeaders,
+                            mode: 'cors',
+                            cache: 'default',
+                            body: JSON.stringify(data)
+                        };
+    
+                    
+                        var myRequest = new Request('http://localhost:3000/email', myInit);
             
-                var myRequest = new Request('http://localhost:3000/email', myInit);
+                        fetch(myRequest)
+                        .then(function(response) {
+                            console.log(response);
+        
+                            resultForm('messageSuccess', 'Você está prestes a entrar em um novo mundo, aguarde e entraremos em contato');
+        
+                            setTimeout(() => {
+                                hideSpin.init()
+                            }, 1500);
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+        
+                            resultForm('messageError', 'Ops, alguma informação está incorreta. Tente novamente');
+        
+                            setTimeout(() => {
+                                hideSpin.init()
+                            }, 1500);
+                        });
+                    } else {
     
-                fetch(myRequest)
-                .then(function(response) {
-                    console.log(response);
-
-                    resultForm('messageSuccess', 'Você está prestes a entrar em um novo mundo, aguarde e entraremos em contato');
-
-                    setTimeout(() => {
-                        hideSpin.init()
-                    }, 1500);
-                })
-                .catch(function(error) {
-                    console.log(error);
-
-                    resultForm('messageError', 'Ops, alguma informação está incorreta. Tente novamente');
-
-                    setTimeout(() => {
-                        hideSpin.init()
-                    }, 1500);
-                });
+                        resultForm('messageError', 'Ops, o campo nome ou e-mail estão vazios');
     
+                        setTimeout(() => {
+                            hideSpin.init()
+                        }, 1500);
+                    }
+
             } else {
-            setTimeout(() => {
-                hideSpin.init()
-            }, 1500);
-       }
+                setTimeout(() => {
+                    hideSpin.init()
+                }, 1500);
+            }
+        }
+           
     });
 });

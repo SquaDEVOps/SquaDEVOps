@@ -1316,7 +1316,6 @@ footer .direitos span {
 }
 
 .modal-controller .modal-content .form-content .spin{
-    transition: all .25s;
     position: absolute;
     pointer-events: none;
     width: 102%;
@@ -1360,6 +1359,7 @@ footer .direitos span {
     color:var(--default-black);
     -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+    position: relative;
 }
 
 .modal-controller .modal-content .form-content .btn-submit{
@@ -1383,6 +1383,37 @@ footer .direitos span {
     transform: scale(1.02);
 }
 
+.messageError, .messageSuccess {
+    padding: 1em;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.messageError{
+    background: var(--color-fifthc);
+}
+
+.messageSuccess{
+    background: var(--default-black);
+}
+
+.messageSuccess p{
+    color: var(--button-default-background);
+}
+
+.messageError p, .messageSuccess p {
+    font-size: 18px !important;
+    font-family: 'Bebas Neue';
+}
+
+
+.messageError.hidden, .messageSuccess.hidden{
+    transition: all .35s;
+    transform: translate(0, 110%);
+    opacity: 0;
+}
 
 /* END BLOCK SLIDER */
 
