@@ -4,12 +4,14 @@ import { WorkItems } from './modules/render/render.js';
 import { renderAllRankings } from './modules/rankings/rankings.js';
 import { renderModal, activateModal } from './modules/modal/modal.js';
 import { listMenu } from './modules/menu-mobile/menu-mobile.js';
+import { routs } from './modules/routs/routs.js';
 
 const renderDef = render_def();
 const workItems = WorkItems();
 const renderRankings = renderAllRankings();
 const modal = renderModal();
 const mobileMenu = listMenu();
+const rout = routs();
 
 /* CALL SLIDES */
 GenerateSlide('mySlides', 'dot', '.prev-arrow', '.next-arrow');
