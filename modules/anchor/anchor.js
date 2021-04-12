@@ -10,9 +10,6 @@ function makeAnchor(){
             e.preventDefault();
     
             let victim = document.querySelector('#'+this.dataset.go);
-
-            console.log(victim);
-
             smoothScroll(victim, 700);
             
         });
@@ -32,7 +29,7 @@ function smoothScroll(target, duration) {
       window.scrollTo(0, run);
       if (timeElapsed < duration) requestAnimationFrame(loop);
     }
-    
+
     function ease(t, b, c, d) {
       t /= d / 2;
       if (t < 1) return c / 2 * t * t + b;
