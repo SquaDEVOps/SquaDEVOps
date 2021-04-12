@@ -1,16 +1,17 @@
 function renderModal(){
     document.addEventListener('DOMContentLoaded', e => {
+
         let modalController = document.createElement('div');
         let modalContent    = document.createElement('div');
         let form            = document.createElement('form');
-        let title           = 'FAZER PARTE DA SQUAD';
-        let MTitle          = new renderInput('h1', { className:'btn btn-submit', data:'buttonSubmit', value:'buttonSubmit', id:'buttonSubmit', innerText: title}); 
-        let submit          = new renderInput('button', { className:'btn btn-submit', data:'buttonSubmit', value:'buttonSubmit', id:'buttonSubmit', innerText: 'Enviar'});
-        let fieldName       = new renderInput('input', { className: 'fieldName', data:'fieldName', placeholder:'Seu nome*', id: 'fieldName' });
-        let fieldMail       = new renderInput('input', { className: 'fieldMail', data:'fieldMail', placeholder:'Seu e-mail*', id: 'fieldMail' });
-        let fieldDiscord    = new renderInput('input', { className: 'fieldDiscord', data:'fieldDiscord', placeholder:'Seu discord (opcional)', id: 'fieldDiscord' });
+        let title           = '';
+        let MTitle          = new renderInput('h1', { className:'btn btn-submit', data:'buttonSubmit', value:'buttonSubmit', id:'buttonSubmit', innerText: title, dataLang: 'modal-title'}); 
+        let submit          = new renderInput('button', { className:'btn btn-submit', data:'buttonSubmit', value:'buttonSubmit', id:'buttonSubmit', innerText: 'Enviar', dataLang: 'modal-cta'});
+        let fieldName       = new renderInput('input', { className: 'fieldName', data:'fieldName', placeholder:'Seu nome*', id: 'fieldName', dataLang: 'modal-name' });
+        let fieldMail       = new renderInput('input', { className: 'fieldMail', data:'fieldMail', placeholder:'Seu e-mail*', id: 'fieldMail', dataLang: 'modal-email' });
+        let fieldDiscord    = new renderInput('input', { className: 'fieldDiscord', data:'fieldDiscord', placeholder:'Seu discord (opcional)', id: 'fieldDiscord', dataLang: 'modal-discord' });
 
-        assignThis(modalController, { className: 'modal-controller hidden', id:'modal-controller', innerHTML: '<svg class="icon icon-game-over inactivate-squadform"><use xlink:href="#icon-game-over"></use></svg> <span>Fechar</span>'});
+        assignThis(modalController, { className: 'modal-controller hidden', id:'modal-controller', innerHTML: '<svg class="icon icon-game-over inactivate-squadform"><use xlink:href="#icon-game-over"></use></svg> <span data-lang="modal-close"></span>'});
         assignThis(modalContent, { className: 'modal-content', id: 'modal-content' });
         assignThis(form, { className: 'form-content', id:'form-content' });
 
@@ -25,6 +26,10 @@ function renderModal(){
 			Object.assign(this.input, props);
 
             this.input.setAttribute('data-'+ props.data, props.data);
+
+            if(props.dataLang != undefined){
+                this.input.setAttribute('data-lang', props.dataLang);
+            }
 
             (props.value != undefined) ? this.input.setAttribute('value', props.value) : this.input.setAttribute('placeholder', props.placeholder);
             
