@@ -1712,6 +1712,9 @@ footer .direitos span {
 }
 
 @media (min-width:1023px) and (max-width:1025px) {
+    h2 {
+        font-size: 26px;
+    }
     .segundo-bloco {
         justify-content: center;
         height: 100vh;
@@ -1730,6 +1733,9 @@ footer .direitos span {
     }
     .segundo-bloco .left-block .box-slider .slideshow-container .mySlides .number_lock {
         font-size: 8em;
+    }
+    .segundo-bloco .right-block .box-top {
+        padding: 16px 80px 70px 48px;
     }
     .segundo-bloco .right-block .cards .card {
         width: 19vw;
@@ -1791,7 +1797,6 @@ footer .direitos span {
         padding-bottom: 15px;
         font-size: 12px;
     }
-    
 }
 
 @media (min-width:1366px) and (max-width:1367px) {
