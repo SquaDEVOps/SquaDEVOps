@@ -1,4 +1,5 @@
 import { portifolio } from './rout/portifolio.js';
+import { translate } from '../translate/translate.js';
 
 function routs(){
     function checkAllNavs(navs){
@@ -18,7 +19,8 @@ function routs(){
       let main = document.querySelectorAll('.rout');
       main.forEach(function(tgt, i) {
         tgt.addEventListener('click', e => {
-          callRout(e.target.dataset.rout, '.blockrender');
+            callRout(e.target.dataset.rout, '.blockrender');
+            translate.getNewRequest();
         });
       });
     
@@ -30,12 +32,20 @@ function routs(){
         let road = checkAllNavs('.rout');
         
         road.forEach(function(roadList, i) {
-
-
           if(routing == 'portifolio'){
               let myrender = portifolio();
-              renderize.classList.remove('hidden');
+              renderize.classList.add('opened');
+              renderize.classList.remove('closed');
+              document.body.classList.add('body-lock');
               renderize.innerHTML = myrender;
+
+              let close = document.querySelector('.close-portifolio');
+
+              close.addEventListener('click', () => {
+                renderize.classList.add('closed');
+                renderize.classList.remove('opened');
+                document.body.classList.remove('body-lock');
+             });
           }
         });
       }

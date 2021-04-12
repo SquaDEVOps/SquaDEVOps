@@ -1,0 +1,108 @@
+{
+
+    "language": "en",
+    "title-01": "Come win",
+    "title-02": "forget the old way of working.",
+    "subtitle-warn": "No more",
+    "subtitle-01": "ruined experiences with recruiters,",
+    "subtitle-02": "to wait for your career!",
+    "cta-01": "I want XP now",
+    
+    "menu-squad": "The Squad",
+    "menu-ranked": "Rankings",
+    "menu-codedrops": "Code drops",
+    "menu-how": "How works?",
+    "menu-faq": "FAQ",
+    "menu-cta": "Participate",
+
+    "sec2-short-title-01": "Designed for your growth",
+    "sec2-main-title-01": "Win",
+
+    "sec2-slide01-title": "Experience without complications",
+    "sec2-slide01-text": "Our Scrum Masters, organize everything for any developer to get frustrated. The rest at SquadDevOps is ready for you! You just need to code and want to be a part of it.",
+
+    "sec2-slide02-title": "Earn points and get rewarded",
+    "sec2-slide02-text": "All quests have a points system, which are added to each Dev of SquadDevOps to participate in the ranking of prizes. Devs that stand out in the ranking receive a value from the prize pool.",
+
+    "sec2-slide03-title": "Development credit",
+    "sec2-slide03-text": "The development credit is exclusive to the developer, with the option of placing DEV + SquadDevOps, we know how important it is to have your own portfolio and we appreciate that.",
+
+    "sec2-rb-short-title": "Why join SquadDevOps?",
+    "sec2-rb-main-title": "Simple. Every dev is welcome!",
+
+    "sec2-card-title01": "Requirements",
+    "sec2-card-short-title01": "Experience",
+    "sec2-card-details01": "Only willingness to learn and focus on developing the desired stack",
+
+    "sec2-card-title02": "Receivments",
+    "sec2-card-short-title02": "There are 2 ways",
+    "sec2-card-details02": "1nd - Project delivery (Without Mentoring / Training) || 2nd - Project delivery (With Mentoring / Training)",
+
+    "sec2-card-title03": "Recognition",
+    "sec2-card-short-title03": "Prize pool",
+    "sec2-card-details03": "Make projects and in addition to having credit for the development, the value of the project for drawing and points to receive prizes you still earn ranking stamps!",
+
+    "sec3-short-title": "Become the Viking of Development",
+    "sec3-slide01-title": "Conquer Rankings",
+    "sec3-slide01-subtitle": "Unlock new skills",
+    "sec3-slide01-subtitle02": "Go beyond what you've always dreamed of",
+    
+    "sec3-slide02-title": "You construct Your success!",
+    "sec3-slide02-subtitle": "Be recognized",
+    "sec3-slide02-subtitle02": "SquadDevOps wants to see you shine",
+
+    "sec4-short-title": "Quests planned for you!",
+    "sec4-main-title": "Select and join (Quest Examples)",
+    "sec4-cta":"GET QUEST",
+
+    "sec4-card1-title": "QUEST ANGULAR",
+    "sec4-card1-detail": "Example quest consists of delivering SPA powered by Travel API",
+
+    "sec5-main-title": "Start your story with SquadDevOps",
+    "sec5-main-subtitle": "Leave the difficulty for companies that ask dinosaurs on their resumes",
+    "sec5-main-description": "You don't have so much experience and are you unsure about the project? Our Dev's are on call to give you a private mentoring and develop with you!",
+    "sec5-card1-title": "Monthly awards",
+    "sec5-card1-detail": "Every month a prize pool is distributed to the developers who have the highest score, the points reset monthly. The rankings remain with the XP applied to the developer.",
+    "sec5-card2-title": "Real growth opportunity",
+    "sec5-card2-detail": "There are 21 Rankings, earn titles, unlock special courses, items, tips and secret contests. Those who go up in ranking become Vikings or elders, the dev chooses the desired title. Higher-ranking Devs are given the privilege of becoming mentors to novice devs. When you reach the peak of the ranking you are part of the staff.",
+
+    "sec6-main-title": "Our",
+    "sec6-main-subtitle": "Contributors",
+
+    "footer-copy": "All rights reserved.",
+
+    "modal-title": "Make part of us",
+    "modal-close": "Close",
+    "modal-name": "Your name*",
+    "modal-email": "Your e-mail*",
+    "modal-discord": "Your discord (optional)",
+    "modal-cta": "SEND",
+
+    "code-drop-point": "Points:",
+    "code-drop-rank": "Rank",
+    "code-drop-back": "Go back",
+    "code-drop-title": "Code drop conquests",
+
+    "sec-faq-title": "Frequently Asked Questions",
+
+    "sec-faq-question01": "Can I take any quest?",
+    "sec-faq-answer01": "Only take your Quest according to your ability, each Quest presented comes with its level of difficulty. We do not use an experience requirement, so you must impose your own limite",
+
+    "sec-faq-question02": "Can I postpone the quest?",
+    "sec-faq-answer02": "Postponing Quest is your right, but present plausible situations to postpone the Quest",
+
+    "sec-faq-question03": "How is the transfer of values?",
+    "sec-faq-answer03": "Values ​​transferred will always be at the end of the Quest, the dev receives a PIX upon request",
+
+    "sec-faq-question04": "How do quests work?",
+    "sec-faq-answer04": "SquadDevOps uses its own portfolio and time to take on projects and pass on to new developers, this way we are able to extinguish the discrepancy that exists in the market where companies demand experience but do not give an opportunity.",
+
+    "sec-faq-question05": "How are the awards made?",
+    "sec-faq-answer05": "Reward system for points, every Dev receives points for engagement and development. In development, SquadDevOps separates 25% of the prize pool for monthly awards to the top 20 Developers and 25% of the prize pool + 2.5% cash in contests.",
+
+    "sec-faq-question06": "How is the distribution of quests?",
+    "sec-faq-answer06": "Distribution of Quests, will be announced in Quests, giving the DEV the option to research which Quest he is interested in joining. Distributions will also be made where the SquadDevOps team selects some Dev and marks it in a job according to their Stack",
+
+    "sec-faq-question07": "Are there any basic requirements to get started?",
+    "sec-faq-answer07":"Just, have knowledge with JavaScript || HTML || CSS"
+}

@@ -1,0 +1,108 @@
+{
+
+    "language": "pt",
+    "title-01": "Venha ganhar",
+    "title-02": "esqueça a forma antiga de trabalhar.",
+    "subtitle-warn": "Chega",
+    "subtitle-01": "experiências ruins com recrutadores",
+    "subtitle-02": "de esperar sua carreira",
+    "cta-01": "QUERO XP AGORA",
+
+    "menu-squad": "A Squad",
+    "menu-ranked": "Rankings",
+    "menu-codedrops": "Code drops",
+    "menu-how": "Como funciona?",
+    "menu-faq": "FAQ",
+    "menu-cta": "Participar",
+    
+    "sec2-short-title-01": "Projetado para o seu crescimento",
+    "sec2-main-title-01": "Ganhe",
+
+    "sec2-slide01-title": "Experiência sem complicações",
+    "sec2-slide01-text": "Nossos Scrum Masters, organizam tudo para nenhum desenvolvedor se frustar. O resto a SquadDevOps já deixa pronto para você! Você só precisa codar e querer fazer parte.",
+
+    "sec2-slide02-title": "Ganhe pontos e seja premiado",
+    "sec2-slide02-text": "Todas as quests possuem um sistema de pontos, que são adicionados a cada Dev da SquadDevOps para participar do ranking de premiações. Os devs que se destacam no ranking recebem um valor do pool de premiações.",
+
+    "sec2-slide03-title": "Crédito do desenvolvimento",
+    "sec2-slide03-text": "O Crédito do desenvolvimento é exclusivo do desenvolvedor, com a opção de colocar DEV + SquadDevOps, sabemos como é importante o dev ter seu próprio portifólio e prezamos por isto.",
+
+    "sec2-rb-short-title": "Por que fazer parte da SquadDevOps?",
+    "sec2-rb-main-title": "Simples. Todo dev é bem vindo!",
+    
+    "sec2-card-title01": "Requerimentos",
+    "sec2-card-short-title01": "Experiência",
+    "sec2-card-details01": "Apenas vontade de aprender e foco no desenvolvimento da stack desejada",
+
+    "sec2-card-title02": "Recebimentos",
+    "sec2-card-short-title02": "São 2 formas",
+    "sec2-card-details02": "1° - Entrega do projeto (Sem Mentoria / Treinamento) || 2° - Entrega do projeto (Com Mentoria / Treinamento)",
+
+    "sec2-card-title03": "Reconhecimento",
+    "sec2-card-short-title03": "Pool de premiações",
+    "sec2-card-details03": "Faça projetos e além de ter crédito pelo desenvolvimento, o valor do projeto para saque e pontos para receber premiações você ainda ganha selos de ranking!",
+
+    "sec3-short-title": "Torne-se o viking do Desenvolvimento",
+    "sec3-slide01-title": "Conquiste Rankings",
+    "sec3-slide01-subtitle": "Desbloqueie novas skills",
+    "sec3-slide01-subtitle02": "Vá além do que sempre sonhou",
+    
+    "sec3-slide02-title": "Você dita Seu sucesso!",
+    "sec3-slide02-subtitle": "Seja reconhecido",
+    "sec3-slide02-subtitle02": "A SquadDevOps quer ver você brilhar",
+
+    "sec4-short-title": "Quests planejados para você!",
+    "sec4-main-title": "Selecione e faça parte (Exemplos Ilustrativos)",
+    "sec4-cta":"OBTER QUEST",
+
+    "sec4-card1-title": "QUEST ANGULAR",
+    "sec4-card1-detail": "Projeto exemplo consiste em entregar SPA alimentado pela Travel API",
+
+    "sec5-main-title": "Comece sua história com a SquadDevOps",
+    "sec5-main-subtitle": "Deixe a dificuldade para as empresas que pedem dinossauros em seus currículos",
+    "sec5-main-description": "Não possui tanta experiência e esta inseguro quanto ao projeto? Nossos Dev's estão de plantão para te dar uma mentoria particular e ainda desenvolver junto com você!",
+    "sec5-card1-title": "Prêmios mensais",
+    "sec5-card1-detail": "Todos os meses um pool de premiações é distribuido aos desenvolvedores que possuem maior pontuação, os pontos resetam mensalmente. Os Rankings permanecem junto ao XP aplicado ao desenvolvedor.",
+    "sec5-card2-title": "Oportunidade de crescimento real",
+    "sec5-card2-detail": "São 21 Rankings, conquiste títulos, desbloqueie cursos especiais, itens, dicas e concursos secretos. Aqueles que sobem de Ranking se tornam vikings ou anciãos, o dev escolhe o título desejado. Devs com maior ranking recebem o privilégio de se tornar mentores de devs iniciantes. Ao atingir o auge do ranking você faz parte do quadro de colaboradores.",
+
+    "sec6-main-title": "Nossos",
+    "sec6-main-subtitle": "Colaboradores",
+
+    "footer-copy": "Todos os direitos reservados.",
+
+    "modal-title": "Venha fazer parte da Squad",
+    "modal-close": "Fechar",
+    "modal-name": "Seu nome*",
+    "modal-email": "Seu e-mail*",
+    "modal-discord": "Seu discord (opcional)",
+    "modal-cta": "ENVIAR",
+
+    "code-drop-point": "Pontos:",
+    "code-drop-rank": "Rank:",
+    "code-drop-back": "Voltar",
+    "code-drop-title": "Code drop concursos",
+
+    "sec-faq-title": "Perguntas frequentes",
+    
+    "sec-faq-question01": "Posso pegar qualquer quest?",
+    "sec-faq-answer01": "Só pegue sua Quest de acordo com sua capacidade, cada Quest apresentada vem com seu nível de dificuldade. Não usamos requisito experiência, portanto você deve impor seu próprio limite",
+
+    "sec-faq-question02": "Posso adiar a quest?",
+    "sec-faq-answer02": "Adiar Quest é um direito seu, más apresente situações plausíveis para adiar a Quest",
+
+    "sec-faq-question03": "Como é o repasse de valores?",
+    "sec-faq-answer03": "Valores repassados serão sempre ao final da Quest, o dev recebe um PIX mediante solicitação",
+
+    "sec-faq-question04": "Como funcionam as quests?",
+    "sec-faq-answer04": "A SquadDevOps usa o próprio portfólio e tempo para assumir projetos e repassar aos novos desenvolvedores, desta forma conseguimos extinguir a discrepância que existe no mercado onde empresas exigem experiência más não dão oportunidade.",
+
+    "sec-faq-question05": "Como são feitas as premiações?",
+    "sec-faq-answer05": "Sistema de premiação por pontos, todo Dev recebe pontos por engajamento e desenvolvimento. Em desenvolvimento a SquadDevOps separa 25% do pool de premiações para premiação mensal ao top 20 de Desenvolvedores e 25% pool de premiações + 2,5% caixa em concursos.",
+
+    "sec-faq-question06": "Como é a distribuição de quests?",
+    "sec-faq-answer06": "Distribuição de Quests, serão anunciados em Quests, dando a opção do DEV pesquisar qual Quest ele tem interesse de ingressar. Também serão feitas distribuições onde a equipe SquadDevOps seleciona algum Dev e o marca em um job de acordo com sua Stack",
+
+    "sec-faq-question07": "Há algum requisito básico para começar?",
+    "sec-faq-answer07":"Apenas, ter conhecimentos com JavaScript || HTML || CSS"
+}
