@@ -104,5 +104,10 @@
     "sec-faq-answer06": "Distribution of Quests, will be announced in Quests, giving the DEV the option to research which Quest he is interested in joining. Distributions will also be made where the SquadDevOps team selects some Dev and marks it in a job according to their Stack",
 
     "sec-faq-question07": "Are there any basic requirements to get started?",
-    "sec-faq-answer07":"Just, have knowledge with JavaScript || HTML || CSS"
+    "sec-faq-answer07":"Just, have knowledge with JavaScript || HTML || CSS",
+
+    "message-success": "You are about to enter a new world, wait and we will contact you",
+    "message-error": "Oops, some information is incorrect. Try againe",
+    "message-fields": "Oops, the name or email field is empty",
+    "message-wrongs": "Wrong informations"
 }

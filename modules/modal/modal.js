@@ -1,3 +1,5 @@
+import { generatedModal } from '../sendmail/sendmail.js';
+
 function renderModal(){
     document.addEventListener('DOMContentLoaded', e => {
 
@@ -7,9 +9,9 @@ function renderModal(){
         let title           = '';
         let MTitle          = new renderInput('h1', { className:'btn btn-submit', data:'buttonSubmit', value:'buttonSubmit', id:'buttonSubmit', innerText: title, dataLang: 'modal-title'}); 
         let submit          = new renderInput('button', { className:'btn btn-submit', data:'buttonSubmit', value:'buttonSubmit', id:'buttonSubmit', innerText: 'Enviar', dataLang: 'modal-cta'});
-        let fieldName       = new renderInput('input', { className: 'fieldName', data:'fieldName', placeholder:'Seu nome*', id: 'fieldName', dataLang: 'modal-name' });
-        let fieldMail       = new renderInput('input', { className: 'fieldMail', data:'fieldMail', placeholder:'Seu e-mail*', id: 'fieldMail', dataLang: 'modal-email' });
-        let fieldDiscord    = new renderInput('input', { className: 'fieldDiscord', data:'fieldDiscord', placeholder:'Seu discord (opcional)', id: 'fieldDiscord', dataLang: 'modal-discord' });
+        let fieldName       = new renderInput('input', { className: 'fieldName', data:'fieldName', placeholder:'Seu nome*', id: 'fieldName', dataLang: 'modal-name', minLength:'5' });
+        let fieldMail       = new renderInput('input', { className: 'fieldMail', data:'fieldMail', placeholder:'Seu e-mail*', id: 'fieldMail', dataLang: 'modal-email', pattern:'^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$' });
+        let fieldDiscord    = new renderInput('input', { className: 'fieldDiscord', data:'fieldDiscord', placeholder:'Seu discord (opcional)', id: 'fieldDiscord', dataLang: 'modal-discord', minLength:'6' });
 
         assignThis(modalController, { className: 'modal-controller hidden', id:'modal-controller', innerHTML: '<svg class="icon icon-game-over inactivate-squadform"><use xlink:href="#icon-game-over"></use></svg> <span data-lang="modal-close"></span>'});
         assignThis(modalContent, { className: 'modal-content', id: 'modal-content' });
@@ -76,6 +78,7 @@ function renderModal(){
             });
         });
 
+        generatedModal();
 
     });
 }
