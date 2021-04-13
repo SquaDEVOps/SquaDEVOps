@@ -75,6 +75,38 @@ let card6 = generateDev(
      'icon-chevron'
 );
 
+let card7 = generateDev (
+    'https://assets.codepen.io/2418451/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1572800755&width=80',
+    'Maiterney Vilela',
+    7,
+    'https://codepen.io/maiterney/embed/oNbyGQB',
+    'icon-chevron'
+);
+
+let card8 = generateDev (
+    'https://assets.codepen.io/2418451/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1572800755&width=80',
+    'Maiterney Vilela',
+    7,
+    'https://codepen.io/maiterney/embed/NWxzaxX',
+    'icon-chevron'
+);
+
+let card9 = generateDev (
+    'https://assets.codepen.io/2418451/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1572800755&width=80',
+    'Maiterney Vilela',
+    7,
+    'https://codepen.io/maiterney/embed/LYGrzpE',
+    'icon-chevron'
+);
+
+let card10 = generateDev (
+    'https://assets.codepen.io/2418451/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1572800755&width=80',
+    'Maiterney Vilela',
+    7,
+    'https://codepen.io/maiterney/embed/ZEbjxZP',
+    'icon-chevron'
+);
+
 
 
 
@@ -86,9 +118,13 @@ function portifolio(){
             <h2 data-lang="code-drop-title">Fragmentos de código concursos</h2>
             <div class="projectsCards">
                 ${card1}
+                ${card7}
                 ${card2}
+                ${card8}
                 ${card3}
+                ${card9}
                 ${card4}
+                ${card10}
                 ${card5}
                 ${card6}
             </div>
