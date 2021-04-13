@@ -1,111 +1,132 @@
-const scene = new THREE.Scene();
-const light = new THREE.DirectionalLight('#ffffff', 0.5);
-light.position.set(20, 0, 100);
+import { Scene, DirectionalLight, Color, PerspectiveCamera, WebGL1Renderer, sRGBEncoding, HemisphereLight, Matrix4, CubeTextureLoader, AnimationMixer, Clock} from '../../build/three.module.js';
+import { GLTFLoader } from '../gltloader/GLTFLoader.module.js';
+import { OrbitControls } from '../orbitcontrols/OrbitControls.module.js';
 
-const clock = new THREE.Clock();
+let xScene = (() => {
+    const scene = new Scene();
+    const light = new DirectionalLight('#ffffff', 0.5);
+    light.position.set(20, 0, 100);
+    let mixer;
 
-
-scene.background = new THREE.Color( 0x2a2b2f );
-
-const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
-camera.position.set( 35, 15, 20 );
-
-const renderer = new THREE.WebGLRenderer( { antialias: true } );
-renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( window.innerWidth/2, window.innerHeight/2);
-renderer.outputEncoding = THREE.sRGBEncoding;
+    const clock = new Clock();
 
 
-document.querySelector('.smartcity').appendChild(renderer.domElement);
+    scene.background = new Color( 0x2a2b2f );
 
-var controls = new THREE.OrbitControls( camera, renderer.domElement );
-controls.target.set( 0, 0.5, 0 );
-controls.update();
-controls.enableZoom = false;
-controls.enablePan = false;
-controls.enableDamping = true;
+    const camera = new PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+    camera.position.set( 35, 15, 20 );
 
-function zoom(){
-    let zoomInput = document.querySelector('.zoom-input');
+    const renderer = new WebGL1Renderer( { antialias: true } );
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( window.innerWidth/2, window.innerHeight/2);
+    renderer.outputEncoding = sRGBEncoding;
 
-    if(controls.enableZoom == false){
-        controls.enableZoom = true;
-        zoomInput.classList.remove('inactive');
-        zoomInput.classList.add('active');
-        
-    } else if (controls.enableZoom == true) {
-        controls.enableZoom = false
-        zoomInput.classList.remove('active');
-        zoomInput.classList.add('inactive');
+    var controls = new OrbitControls( camera, renderer.domElement );
+    controls.target.set( 0, 0.5, 0 );
+    controls.update();
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.enableDamping = true;
+
+    function zoom(){
+        let zoomInput = document.querySelector('.zoom-input');
+
+        if(controls.enableZoom == false){
+            controls.enableZoom = true;
+            zoomInput.classList.remove('inactive');
+            zoomInput.classList.add('active');
+            
+        } else if (controls.enableZoom == true) {
+            controls.enableZoom = false
+            zoomInput.classList.remove('active');
+            zoomInput.classList.add('inactive');
+        }
+
     }
 
+
+    scene.add( new HemisphereLight( 0xffffff, 0x000000, 0.4 ) );
+
+    const dirLight = new DirectionalLight( 0xffffff, 1 );
+    dirLight.position.set( 5, 2, 8 );
+    scene.add( dirLight );
+
+    // envmap
+    const path = './smartCity/textures/';
+    const format = '.jpg';
+    const envMap = new CubeTextureLoader().load( [
+        path + 'Texture-base-gloss-jpg_baseColor' + format
+    ] );
+
+
+    const loader = new GLTFLoader();
+    loader.load( './smartCity/scene.gltf', function ( gltf ) {
+
+        let model = gltf.scene;
+        const matrix = new Matrix4();
+
+        model.position.set( 0, 2, 0 );
+        model.scale.set( .35, .35, .35 );
+        model.rotateY(165);
+
+        scene.add( model );
+
+        mixer = new AnimationMixer( model );
+        mixer.clipAction( gltf.animations[ 0 ] ).play();
+
+        animate();
+
+    }, undefined, function ( e ) {
+
+        console.error( e );
+
+    });
+
+    function render() {
+        //requestAnimationFrame(render);
+        document.querySelector('.smartcity').appendChild(renderer.domElement);
+        renderer.render(scene, camera);
+    }
+
+    function destroy(){
+        document.querySelector('.smartcity').innerHTML = ' ';
+    }
+
+
+
+    function animate() {
+
+        requestAnimationFrame( animate );
+
+        const delta = clock.getDelta();
+
+        mixer.update( delta );
+
+        controls.update();
+
+        renderer.render( scene, camera );
+
+    }
+
+    window.onresize = function () {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+        render();
+
+    };
+
+    //render();
+
+    return {
+        init:render,
+        stop:destroy
+    }
+
+})();
+
+export {
+    xScene
 }
-
-
-scene.add( new THREE.HemisphereLight( 0xffffff, 0x000000, 0.4 ) );
-
-const dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
-dirLight.position.set( 5, 2, 8 );
-scene.add( dirLight );
-
-// envmap
-const path = './smartCity/textures/';
-const format = '.jpg';
-const envMap = new THREE.CubeTextureLoader().load( [
-    path + 'Texture-base-gloss-jpg_baseColor' + format
-] );
-
-const loader = new THREE.GLTFLoader();
-loader.load( './smartCity/scene.gltf', function ( gltf ) {
-
-    const model = gltf.scene;
-    const matrix = new THREE.Matrix4();
-    
-    model.position.set( 0, 2, 0 );
-    model.scale.set( .35, .35, .35 );
-    model.rotateY(165);
-
-    scene.add( model );
-
-    mixer = new THREE.AnimationMixer( model );
-    mixer.clipAction( gltf.animations[ 0 ] ).play();
-
-    animate();
-
-}, undefined, function ( e ) {
-
-    console.error( e );
-
-});
-
-function render() {
-    requestAnimationFrame(render);
-    renderer.render(scene, camera);
-}
-
-
-function animate() {
-
-    requestAnimationFrame( animate );
-
-    const delta = clock.getDelta();
-
-    mixer.update( delta );
-
-    controls.update();
-
-    renderer.render( scene, camera );
-
-}
-
-window.onresize = function () {
-
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
-    render();
-
-};
-
-render();
