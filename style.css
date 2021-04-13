@@ -177,7 +177,7 @@ a{
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 8;
+    z-index: 10;
     padding: 15px 0;
     justify-content: space-around;
     background: var(--default-black);
@@ -1448,6 +1448,19 @@ footer .direitos span {
 }
 
 
+body.spin:before{
+    position: absolute;
+    pointer-events: none;
+    width: 102%;
+    height: 100%;
+    background:white;
+    z-index: 9;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+
 .modal-controller .modal-content .form-content .spin svg{
     width: 40%;
     height: 40%;
@@ -2008,7 +2021,7 @@ footer .direitos span {
     position: fixed;
     top: 1.65%;
     right: 2%;
-    z-index: 10;
+    z-index: 11;
 }
 
 .langs svg{

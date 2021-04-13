@@ -1,5 +1,7 @@
 let translate = (() => {
 
+    document.body.classList.add('spin');
+
     let lang = {};
     let ptLang = document.querySelector('.lang-pt');
     let enLang = document.querySelector('.lang-en');
@@ -45,7 +47,11 @@ let translate = (() => {
             translateNow(lang);
             return lang;
         }
-        
+
+        setTimeout(() => {
+            document.body.classList.remove('spin'); 
+        }, 9050);
+
     }
 
     getNewRequest();

@@ -28,21 +28,22 @@ let xScene = (() => {
     controls.enablePan = false;
     controls.enableDamping = true;
 
-    function zoom(){
+
+    
         let zoomInput = document.querySelector('.zoom-input');
 
-        if(controls.enableZoom == false){
-            controls.enableZoom = true;
-            zoomInput.classList.remove('inactive');
-            zoomInput.classList.add('active');
-            
-        } else if (controls.enableZoom == true) {
-            controls.enableZoom = false
-            zoomInput.classList.remove('active');
-            zoomInput.classList.add('inactive');
-        }
-
-    }
+        zoomInput.addEventListener('click', e => {
+            if(controls.enableZoom == false){
+                controls.enableZoom = true;
+                zoomInput.classList.remove('inactive');
+                zoomInput.classList.add('active');
+                
+            } else if (controls.enableZoom == true) {
+                controls.enableZoom = false
+                zoomInput.classList.remove('active');
+                zoomInput.classList.add('inactive');
+            }
+        });
 
 
     scene.add( new HemisphereLight( 0xffffff, 0x000000, 0.4 ) );
