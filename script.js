@@ -11,16 +11,16 @@ import { scrollIt } from './modules/scroll/scroll.js';
 import { collapse } from './modules/collapse/collapse.js';
 
 
-const renderDef = render_def();
-const workItems = WorkItems();
-const renderRankings = renderAllRankings();
-const modal = renderModal();
-const activeTranslate = translate.getNewRequest();
-const mobileMenu = listMenu();
-const rout = routs();
-const scroll = scrollIt();
-const anchor = makeAnchor();
-const collpse = collapse();
+translate.getNewRequest();
+render_def();
+WorkItems();
+renderModal();
+listMenu();
+routs();
+scrollIt();
+makeAnchor();
+collapse();
+renderAllRankings();
 
 /* CALL SLIDES */
 GenerateSlide('mySlides', 'dot', '.prev-arrow', '.next-arrow');

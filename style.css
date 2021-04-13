@@ -339,7 +339,6 @@ a{
 }
 
 .segundo-bloco .left-block{
-    /* width: 50vw; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1252,6 +1251,7 @@ footer .direitos span {
     align-items: flex-start;
     justify-content: flex-end;
     position: relative;
+    width: 50%;
 }
 
 
@@ -1428,6 +1428,25 @@ footer .direitos span {
     justify-content: center;
     position: relative;
 }
+
+.modal-controller .modal-content .form-content input{
+    border: 1px solid white;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255, 1); 
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255, 1);
+}
+
+.modal-controller .modal-content .form-content input:focus:valid {
+    border: 1px solid var(--button-default-background);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(73,232,50, 1); 
+    box-shadow: 0px 0px 5px 0px rgba(73,232,50, 1);
+}
+
+.modal-controller .modal-content .form-content input:invalid {
+    border: 1px solid var(--color-fifthc);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(243,55,69, 1); 
+    box-shadow: 0px 0px 5px 0px rgba(243,55,69, 1); 
+}
+
 
 .modal-controller .modal-content .form-content .spin svg{
     width: 40%;
