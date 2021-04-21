@@ -1637,7 +1637,8 @@ body.spin:before{
         margin: 0px 13px 40px 0;
     }
     .call-to-action {
-        bottom: 20px;
+        width: 100%;
+        bottom: 0;
     }
     .copy-squad {
         margin: 0 10%;
@@ -1657,8 +1658,12 @@ body.spin:before{
         height: 65vh;
     }
     .modal-controller .icon-game-over {
-        top: 5%;
-        right: 10%;
+        top: 10%;
+        right: 5%;
+    }
+
+    .modal-controller .modal-content .form-content .btn-submit {
+        width: 54%;
     }
 }
 
@@ -2224,6 +2229,23 @@ body.spin:before{
 
     .direitos {
         margin: 0 0 0 1.5em;
+    }
+
+    .quinto-bloco .box-top {
+        padding: 5% 15px;
+    }
+
+    .box-top {
+        padding: 5% 36px;
+    }
+
+    .segundo-bloco .right-block .cards .card .card-content {
+        text-align: center;
+    }
+
+
+    .segundo-bloco .left-block {
+        align-items: unset;
     }
 
     .w-60 {
