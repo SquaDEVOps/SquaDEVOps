@@ -1,6 +1,21 @@
-import { Scene, DirectionalLight, Color, PerspectiveCamera, WebGL1Renderer, sRGBEncoding, HemisphereLight, Matrix4, CubeTextureLoader, AnimationMixer, Clock} from '../../build/three.module.js';
+import { Scene, DirectionalLight, Color, PerspectiveCamera, WebGL1Renderer, sRGBEncoding, HemisphereLight, Matrix4, CubeTextureLoader, AnimationMixer, Clock, CanvasRenderer} from '../../build/three.module.js';
 import { GLTFLoader } from '../gltloader/GLTFLoader.module.js';
 import { OrbitControls } from '../orbitcontrols/OrbitControls.module.js';
+
+function detectWebGLContext () {
+    var canvas = document.createElement("canvas");
+    var gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+    if (gl && gl instanceof WebGLRenderingContext) {
+        console.log("Congratulations! Your browser supports WebGL.");
+        return true;
+    } else {
+        console.log("Failed to get WebGL context. Your browser or device may not support WebGL.");
+        return false;
+    }
+  }
+
+  let detect = detectWebGLContext ();
+
 
 let xScene = (() => {
     const scene = new Scene();
@@ -14,19 +29,41 @@ let xScene = (() => {
     scene.background = new Color( 0x2a2b2f );
 
     const camera = new PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
-    camera.position.set( 35, 15, 20 );
 
-    const renderer = new WebGL1Renderer( { antialias: true } );
+    if(window.innerWidth <= 768){
+        camera.position.set( 85, 15, 20 );
+    }else {
+        camera.position.set( 35, 15, 20 );
+    }
+
+
+    const renderer =  detect ? new WebGL1Renderer({ antialias: true }) : new CanvasRenderer({ alpha: true });
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth/2, window.innerHeight/2);
+
+    if(window.innerWidth <= 768){
+        renderer.context.getExtension('OES_standard_derivatives');
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    }else {
+        renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+    }
+
     renderer.outputEncoding = sRGBEncoding;
 
     var controls = new OrbitControls( camera, renderer.domElement );
-    controls.target.set( 0, 0.5, 0 );
-    controls.update();
+
+    if(window.innerWidth <= 768){
+        controls.autoRotate = true;
+    }else{
+
+        controls.target.set( 0, 0.5, 0 );
+        controls.update();
+
+        controls.enableDamping = true;
+    }
+
     controls.enableZoom = false;
     controls.enablePan = false;
-    controls.enableDamping = true;
+ 
 
 
     
@@ -103,7 +140,9 @@ let xScene = (() => {
 
         mixer.update( delta );
 
+
         controls.update();
+
 
         renderer.render( scene, camera );
 
@@ -114,7 +153,13 @@ let xScene = (() => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
 
-        renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+        if(window.innerWidth <= 768){
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }else {
+            renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+        }
+
+
         render();
 
     };
