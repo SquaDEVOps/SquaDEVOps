@@ -44,17 +44,15 @@ let translate = (() => {
         request.onload = async function() {
             //console.log(request.response);
             lang = await request.response;
+            document.body.classList.remove('spin'); 
             translateNow(lang);
             return lang;
         }
 
-        setTimeout(() => {
-            document.body.classList.remove('spin'); 
-        }, 9050);
-
     }
 
-    getNewRequest();
+   getNewRequest();
+
     
     function translateNow(lang){
         let searchLang = document.querySelectorAll('[data-lang]');
