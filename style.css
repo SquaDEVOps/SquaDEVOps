@@ -1480,7 +1480,7 @@ body.spin:after{
     width: 105%;
     height: 2px;
     background: var(--default-black);
-    position: absolute;
+    position: fixed;
     transform: rotate(-11deg);
     top: 16.35%;
     left: -25px;
