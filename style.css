@@ -1447,9 +1447,12 @@ footer .direitos span {
     box-shadow: 0px 0px 5px 0px rgba(243,55,69, 1); 
 }
 
-body.spin{
+body.spin, body.lock{
     overflow: hidden !important;
 }
+
+
+
 
 
 body.spin:before {
@@ -1500,7 +1503,7 @@ body.spin:after{
     );
         top: 27.35%;
         left: -5px;
-        z-index: 9999999999999;
+        z-index: 80000;
     }
 
     body.spin:before {
@@ -1514,7 +1517,7 @@ body.spin:after{
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
-        z-index: 99999999999;
+        z-index: 80000;
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -2419,3 +2422,59 @@ body.spin:after{
       stroke-dashoffset: 0;
     }
   }
+
+  .chose-a-side.active {
+    transition: all .35s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 90000000;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: fill;
+}
+
+.chose-a-side{
+    transition: all .35s;
+    display: none;
+    pointer-events: none;
+}
+
+.chose-a-side .choseAdiv{
+    transition: all .35s;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.chose-a-side.active .choseAdiv{
+        transition: all .35s;
+        background: white;
+        opacity: 1;
+        transform: translateY(-50px);
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+.chose-a-side.active .choseChoices{
+    margin-top: 50px;
+    width: 50%;
+}
+
+.chose-a-side.active .choseChoices button{
+    padding: 1.5em 1em;
+    border:0;
+    margin: 0 0 0 .25em;
+    width: 49%;
+    background: var(--color-fifthc);
+}
+
+.chose-a-side.active .choseChoices button:hover{
+    transition: all .35s;
+    background: var(--button-default-background);
+}

@@ -1,6 +1,10 @@
+import { choseAside } from '../choseaside/choseaside.js';
+
 let translate = (() => {
 
     document.body.classList.add('spin');
+
+    choseAside();
 
     let lang = {};
     let ptLang = document.querySelector('.lang-pt');
@@ -33,7 +37,7 @@ let translate = (() => {
     });
 
     function getNewRequest(){
-        
+    
         var request = new XMLHttpRequest();
 
         request.open('GET', requestURL);

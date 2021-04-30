@@ -54,7 +54,7 @@ let xScene = (() => {
     if(window.innerWidth <= 768){
         controls.autoRotate = true;
     }else{
-
+        controls.autoRotate = true;
         controls.target.set( 0, 0.5, 0 );
         controls.update();
 
