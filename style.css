@@ -410,12 +410,13 @@ a{
     justify-content: space-around;
 }
 .segundo-bloco .right-block .cards .card {
-    width: 13vw;
+    flex:1;
+    margin: 0 1em;
     /* height: 30vh; */
 }
 .segundo-bloco .right-block .cards .card .card-header{
     /* width: 249.45px; */
-    height: 285px;
+    height: auto;
     display: flex;
     background: white;
     margin: 0;
@@ -1447,9 +1448,12 @@ footer .direitos span {
     box-shadow: 0px 0px 5px 0px rgba(243,55,69, 1); 
 }
 
-body.spin{
+body.spin, body.lock{
     overflow: hidden !important;
 }
+
+
+
 
 
 body.spin:before {
@@ -1500,7 +1504,7 @@ body.spin:after{
     );
         top: 27.35%;
         left: -5px;
-        z-index: 9999999999999;
+        z-index: 80000;
     }
 
     body.spin:before {
@@ -1514,7 +1518,7 @@ body.spin:after{
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
-        z-index: 99999999999;
+        z-index: 80000;
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -1642,6 +1646,15 @@ body.spin:after{
 
 
 @media (max-width: 768px) {
+
+    .call-to-action {
+        right: 20% !important;
+    }
+
+    h2{
+        font-size:27px;
+    }
+
     .desktop-menu{
         display: none;
     }
@@ -1731,9 +1744,13 @@ body.spin:after{
     .modal-controller .modal-content .form-content .btn-submit {
         width: 54%;
     }
+
+    #howorks .left-block{
+        display:none;
+    }
 }
 
-@media (min-width:768px){
+@media only screen and (min-width:768px){
     header{
         height: 55vh;
     }
@@ -1766,7 +1783,7 @@ body.spin:after{
         height: 30vh;
     }
     .segundo-bloco .right-block .cards .card .card-header{
-        width: 249.45px;
+        width: auto;
     }
     .terceiro-bloco .left-block {
         width: 50vw;
@@ -1904,7 +1921,65 @@ body.spin:after{
     }
 }
 
+@media only screen and (max-width:1367px){
+
+    .zoom-input{
+        top: 5%;
+        right: 5%;
+    }
+
+    .bloco-faq{
+        padding: 5% 10%;
+    }
+
+    .quarto-bloco .cards-box .card .card-header {
+        padding: 25px 0 25px 0;
+        text-align: center;
+        position: relative;
+    }
+
+    .quarto-bloco .cards-box .card .card-header svg{
+        width: 90px;
+        height: 90px;
+    }
+
+    .quarto-bloco .cards-box .card:hover .card-header svg {
+        transform: translateX(-117px);
+        width: 95px;
+        height: 95px;
+    }
+
+    .terceiro-bloco h2{
+        font-size:100%;
+    }
+
+    .segundo-bloco .right-block .cards .card .card-content h4, p{
+        font-size: 80%;
+    }
+
+    .terceiro-bloco .right-block .box-container .box-slider .projectSlides svg{
+        left:unset;
+        height: 30%;
+    }
+
+    .terceiro-bloco .left-block .box-container .viking svg{
+        width: 55%;
+    }
+
+    .call-to-action{
+        right: 28%;
+        transform: rotate(0); 
+        width:auto;
+        bottom: 10%;
+    }
+
+    .quarto-bloco {
+        padding: 5%;
+    }
+}
+
 @media (min-width:1366px) and (max-width:1367px) {
+
     .segundo-bloco {
         justify-content: center;
         height: 100vh;
@@ -2219,7 +2294,7 @@ body.spin:after{
   }
   .accordion button[aria-expanded=true] + .accordion-content {
     opacity: 1;
-    max-height: 9em;
+    max-height: 100%;
     transition: all 200ms linear;
     border:1px solid var(--button-default-background);
     border-radius: 15px;
@@ -2419,3 +2494,59 @@ body.spin:after{
       stroke-dashoffset: 0;
     }
   }
+
+  .chose-a-side.active {
+    transition: all .35s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 90000000;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: fill;
+}
+
+.chose-a-side{
+    transition: all .35s;
+    display: none;
+    pointer-events: none;
+}
+
+.chose-a-side .choseAdiv{
+    transition: all .35s;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.chose-a-side.active .choseAdiv{
+        transition: all .35s;
+        background: white;
+        opacity: 1;
+        transform: translateY(-50px);
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+.chose-a-side.active .choseChoices{
+    margin-top: 50px;
+    width: 50%;
+}
+
+.chose-a-side.active .choseChoices button{
+    padding: 1.5em 1em;
+    border:0;
+    margin: 0 0 0 .25em;
+    width: 49%;
+    background: var(--color-fifthc);
+}
+
+.chose-a-side.active .choseChoices button:hover{
+    transition: all .35s;
+    background: var(--button-default-background);
+}

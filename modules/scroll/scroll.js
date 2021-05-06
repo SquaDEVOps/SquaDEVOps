@@ -7,9 +7,14 @@ function scrollIt(){
         (window.scrollY > menu.getBoundingClientRect().height * 2) ? menu.classList.add('fixed') : menu.classList.remove('fixed');
 
         if(window.innerWidth < 768){
-            (window.scrollY > 5434) ?  xScene.init() : xScene.stop();
-            (window.scrollY > menu.getBoundingClientRect().height * 2) ? document.body.style.marginTop = "77px" : document.body.style.marginTop = "0px" ;
+
+            (window.scrollY > 2100) ?  xScene.stop() : xScene.stop();
+
+        } if (window.innerWidth < 1367 ) {
+            (window.scrollY > 2100) ?  xScene.init() : xScene.stop();
+            (window.scrollY > menu.getBoundingClientRect().height * 2) ? document.body.style.marginTop = "85px" : document.body.style.marginTop = "0px" ;
         } else {
+            (window.scrollY > menu.getBoundingClientRect().height * 2) ? document.body.style.marginTop = "77px" : document.body.style.marginTop = "0px" ;
             (window.scrollY > 2600) ?  xScene.init() : xScene.stop();
             (window.scrollY > menu.getBoundingClientRect().height * 2) ? document.body.style.marginTop = "85px" : document.body.style.marginTop = "0px" ;
         }
@@ -18,13 +23,20 @@ function scrollIt(){
 
     document.addEventListener('DOMContentLoaded', e => {
         (window.scrollY > menu.getBoundingClientRect().height * 2) ? menu.classList.add('fixed') : menu.classList.remove('fixed');
+
         if(window.innerWidth < 768){
-            (window.scrollY > 5434) ?  xScene.init() : xScene.stop();
-            (window.scrollY > menu.getBoundingClientRect().height * 2) ? document.body.style.marginTop = "77px" : document.body.style.marginTop = "0px" ;
+
+            (window.scrollY > 2100) ?  xScene.stop() : xScene.stop();
+
+        } else if (window.innerWidth < 1367 ) {
+            (window.scrollY > 2100) ?  xScene.init() : xScene.stop();
+            (window.scrollY > menu.getBoundingClientRect().height * 2) ? document.body.style.marginTop = "85px" : document.body.style.marginTop = "0px" ;
         } else {
+            (window.scrollY > menu.getBoundingClientRect().height * 2) ? document.body.style.marginTop = "77px" : document.body.style.marginTop = "0px" ;
             (window.scrollY > 2600) ?  xScene.init() : xScene.stop();
             (window.scrollY > menu.getBoundingClientRect().height * 2) ? document.body.style.marginTop = "85px" : document.body.style.marginTop = "0px" ;
         }
+
     });
     
 }

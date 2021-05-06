@@ -54,7 +54,7 @@ let xScene = (() => {
     if(window.innerWidth <= 768){
         controls.autoRotate = true;
     }else{
-
+        controls.autoRotate = true;
         controls.target.set( 0, 0.5, 0 );
         controls.update();
 
@@ -130,20 +130,13 @@ let xScene = (() => {
         document.querySelector('.smartcity').innerHTML = ' ';
     }
 
-
-
     function animate() {
 
         requestAnimationFrame( animate );
 
         const delta = clock.getDelta();
-
         mixer.update( delta );
-
-
         controls.update();
-
-
         renderer.render( scene, camera );
 
     }
@@ -158,7 +151,6 @@ let xScene = (() => {
         }else {
             renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
         }
-
 
         render();
 
