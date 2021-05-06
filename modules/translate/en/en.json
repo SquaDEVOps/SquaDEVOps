@@ -109,5 +109,7 @@
     "message-success": "You are about to enter a new world, wait and we will contact you",
     "message-error": "Oops, some information is incorrect. Try againe",
     "message-fields": "Oops, the name or email field is empty",
-    "message-wrongs": "Wrong informations"
+    "message-wrongs": "Wrong informations",
+    "choseaside-title": "Ops i'm a title",
+    "choseaside-subtitle": "Ops, i'am a subtitle"
 }

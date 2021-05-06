@@ -109,6 +109,8 @@
     "message-success": "Você está prestes a entrar em um novo mundo, aguarde e entraremos em contato",
     "message-error": "Ops, alguma informação está incorreta. Tente novamente",
     "message-fields": "Ops, o campo nome ou e-mail estão vazios",
-    "message-wrongs": "Dados inválidos"
+    "message-wrongs": "Dados inválidos",
+    "choseaside-title": "Opa sou um título",
+    "choseaside-subtitle": "Opa eu sou um subtítulo"
 
 }

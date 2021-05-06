@@ -4,7 +4,7 @@ let translate = (() => {
 
     document.body.classList.add('spin');
 
-    choseAside();
+    // choseAside();
 
     let lang = {};
     let ptLang = document.querySelector('.lang-pt');
