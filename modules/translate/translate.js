@@ -48,7 +48,11 @@ let translate = (() => {
         request.onload = async function() {
             //console.log(request.response);
             lang = await request.response;
-            document.body.classList.remove('spin'); 
+
+            setTimeout(() => {
+                document.body.classList.remove('spin'); 
+            }, 900);
+
             translateNow(lang);
             return lang;
         }

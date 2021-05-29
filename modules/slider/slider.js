@@ -76,9 +76,6 @@ function GenerateSlide(mySlides, dot, prev, next){
     slides[slideIndex-1].classList.remove('rock');;
     dots[slideIndex-1].className += " active";
     }
-
-
-
 }
 /* END BLOCK SLIDE SCRIPT */
 
