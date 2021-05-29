@@ -4,15 +4,21 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=no">
         <title>Squadevops</title>
-        <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="critical.css" type="text/css" media="all" />
+        
+        <link rel="stylesheet/scss" type="text/css" href="style.scss">
         <link rel="icon" type="image/png" href="favicon.png" />
         <meta property='og:title' content='Squadevops better way to work'/>
         <meta property='og:image' content='favicon.png'/>
         <meta property='og:description' content='Experience without complications'/>
         <meta property='og:url' content='https://www.squadevops.com/'/>
+
+        <style>
+            body.lock,body.spin{overflow:hidden!important}body.spin:before{content:'LOADING';position:fixed;pointer-events:none;top:0;width:102%;height:100%;background:#d4d9f7;background-image:url(assets/designergif.gif);background-repeat:no-repeat;background-position:center;background-size:auto;z-index:99999999999;display:flex;align-items:flex-end;justify-content:center;overflow:hidden!important;line-height:7em;letter-spacing:2em;font-weight:700;font-size:2em}body.spin:after{content:'';width:105%;height:2px;background:var(--default-black);position:fixed;transform:rotate(-11deg);top:16.35%;left:-25px;z-index:9999999999999}
+        </style>
     </head>
 
-    <body data-color-mode="dark" class="spinOff">
+    <body data-color-mode="dark" class="spin">
    
         <!-- <div class="chose-a-side active"></div> -->
 
@@ -421,6 +427,9 @@
             </div>
         </footer>
     
+        <script src="./compilers/sass.min.js"></script>
+        <script src="./compilers/compiler.js"></script>
+
         <script src="script.js" type="module" charset="utf-8"></script>
         <div class="render-defs"></div>
 
