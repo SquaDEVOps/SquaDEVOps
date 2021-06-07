@@ -867,6 +867,10 @@ a{
     padding: 0 10vw;
     background: var(--default-black);
     color:white;
+    
+    a {
+        color: tomato;
+    }
 
     .cards{
         display: flex;
