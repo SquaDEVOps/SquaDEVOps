@@ -867,7 +867,7 @@ a{
     padding: 0 10vw;
     background: var(--default-black);
     color:white;
-    
+
     a {
         color: tomato;
     }
@@ -875,6 +875,7 @@ a{
     .cards{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
 
         .card{
             display: flex;
@@ -884,6 +885,10 @@ a{
             align-items: center;
             justify-content: center;
             padding: 6em 0;
+
+            h5 {
+                font-size: 1em;
+            }
 
             img{
                 max-width: 45px;
