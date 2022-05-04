@@ -1,6 +1,66 @@
 .leads-controller{
     padding: calc(var(--space-lg) * 4);
 
+    &.modal{
+
+        &.active{
+            //transition: var(--fast);
+            padding: calc(var(--space-lg) * 4);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        //transition: var(--fast);
+
+        overflow: hidden;
+        position: fixed;
+        z-index: 99;
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        padding: 0;
+        background: rgba(0, 0, 0, .15);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-content{
+            background:white;
+            position: relative;
+            display: flex;
+            padding: var(--space-lg);
+            border-radius: var(--borders);
+        }
+
+        &.dev{
+            .close{
+                max-width: var(--md);
+                position: absolute;
+                right: var(--space-md);
+                top: var(--space-sm);
+                transition: var(--slow);
+
+                svg{
+                    pointer-events: none;
+                }
+
+                &:hover{
+                    transition: var(--slow);
+                    transform: scale(1.25) rotate(15deg) translateY(-2px);
+                }
+            }
+
+            .action-content{
+                padding: 0;
+                form{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
     .rich-content{
         position: relative;
     }
