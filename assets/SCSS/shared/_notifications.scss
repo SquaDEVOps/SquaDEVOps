@@ -1,0 +1,93 @@
+.notifications-controller{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1%;
+    //width: 250px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-roboto);
+
+    .notification{
+        transform: translateX(0);
+        color: var(--primary-color);
+        background: white;
+        font-weight: bold;
+        z-index: 999;
+        animation: showNote 0.5s forwards;
+        border-radius: var(--borders);
+        overflow: hidden;
+        box-shadow: 1px 1px 15px rgb(0, 0, 0, .15);
+        margin: calc(var(--space-sm) / 2) 0;
+
+        p{
+            font-family: var(--font-roboto);
+            color: var(--primary-color);
+            font-size: var(--md);
+        }
+
+        progress{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            &::-webkit-progress-bar {
+                background: rgba(0, 0, 0, 0.15);
+            }
+        }
+    
+        animation: showNote .5s forwards;
+    
+        &.hide{
+            animation: hideNote 1.5s forwards;
+        }
+    
+        &.success{
+    
+            //background: var(--success);
+            padding: var(--lg);
+
+            progress{
+                &::-webkit-progress-value{
+                    background: var(--success);
+                }
+            }
+    
+        }
+    
+        &.error{
+    
+            //background: var(--error);
+            padding: var(--lg);
+
+            progress{
+                &::-webkit-progress-value{
+                    background: var(--error);
+                }
+            }
+    
+        }
+    
+    }
+}
+
+
+
+@keyframes showNote {
+    from{
+        transform: translateX(100vw);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideNote {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100vw);
+    }
+}

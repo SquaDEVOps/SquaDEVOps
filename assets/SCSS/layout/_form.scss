@@ -1,0 +1,18 @@
+.control-input{
+    position: relative;
+    .invalid-values {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: var(--space-sm);
+        padding: 0 calc(var(--space-sm) / 1.85);
+        color: var(--error);
+        background: white;
+        span{
+            font-size: var(--sm);
+            font-family: var(--font-roboto);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}

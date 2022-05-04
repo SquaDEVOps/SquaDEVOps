@@ -1,0 +1,35 @@
+.short-title, .title, .subtitle {
+    font-family: var(--font-roboto);
+}
+
+.dev{
+
+    &-title{
+        margin: var(--sm) 0;
+        font-weight: bold;
+        font-size: calc(var(--lg) + 4px);
+
+        span{
+            font-weight: bold;
+            font-size: calc(var(--lg) + 4px);
+        }
+
+        &.nm{
+            margin: 0;
+        }
+    }
+
+    &-subtitle, &-description{
+        font-size: calc(var(--md));
+
+        span, strong{
+            font-size: calc(var(--md));
+        }
+    
+        &.main{
+            color: var(--third-color);
+            font-weight: bold;
+        }
+    }
+}
+

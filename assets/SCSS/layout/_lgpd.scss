@@ -1,0 +1,115 @@
+.lgpd {
+    transition: all .45s;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    bottom: 15vh;
+    width: 270px;
+    padding: var(--space-md) var(--space-sm);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
+    border-radius: 0 var(--borders) var(--borders) 0;
+    transform: translateX(-340px);
+    background: white;
+
+
+    &.active{
+        transition: all .45s;
+        //transform: translateX(0);
+        animation: showLgpd 1s ease-in-out 1s forwards;
+    }
+
+    &.inactive{
+        transition: all .45s;
+        //transform: translateX(0);
+        animation: hideLgpd 1s forwards;
+    }
+
+    
+    p{
+        line-height: 12px;
+        display: flex;
+        flex-wrap: wrap;
+
+        span, button{
+            font-family: var(--font-roboto);
+            font-size: var(--sm);
+            margin: 0;
+            padding: 0;
+        }
+        
+        span{
+            width: 100%;
+            text-align: center;
+        }
+
+        button{
+            padding: var(--space-sm);
+            margin: calc(var(--space-sm) / 1);
+            background: var(--primary-color);
+            color: white;
+            width: 40%;
+        }
+    }
+
+    .close{
+        position: absolute;
+        width: 15px;
+        cursor: pointer;
+        right: -1.5em;
+        top: -0.5em;
+    }
+}
+
+.privacy-controller {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .75);
+    z-index: 99;
+
+    p, span, button, strong{
+        font-family: var(--font-roboto);
+        font-size: var(--sm);
+    }
+
+    strong{
+        display: block;
+        margin: var(--space-sm) 0;
+    }
+
+    .title{
+        margin-bottom: var(--space-sm);
+    }
+
+    .close{
+        width: 25px;
+        color: white;
+        margin: 0 25vw 0 auto;
+    }
+
+    button{
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--md);
+        color: var(--primary-color);
+        background: white;
+        margin: var(--space-md);
+    }
+
+    &.active{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .privacy-policy {
+        background: white;
+        width: 50%;
+        max-height: 50vh;
+        padding: var(--space-lg);
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,26 @@
+.footer-controller{
+    padding: var(--padding-container);
+    background: var(--primary-color);
+    .logo{
+        max-width: 80px;
+        svg{
+            color: white;
+        }
+    }
+
+    .copy{
+        span, strong{
+            font-family: var(--font-roboto);
+            .footer-copy{
+                margin-left: var(--space-sm);
+            }
+
+            small{
+                font-size: var(--sm);
+                font-family: var(--font-roboto);
+            }
+        }
+        text-align: right;
+        color: white;
+    }
+}

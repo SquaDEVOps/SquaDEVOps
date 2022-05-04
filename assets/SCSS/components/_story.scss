@@ -1,0 +1,51 @@
+.story-controller{
+    display:flex;
+    //align-items: center;
+    justify-content: center;
+    padding: calc(var(--space-lg) * 4) calc(var(--space-lg) * 4) calc(var(--space-lg) * 2) calc(var(--space-lg) * 4); 
+    flex: 1;
+    .story-card{
+        padding: var(--space-md);
+        position: relative;
+        flex: 1;
+        .short-title{
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+        .subtitle{
+            font-size: var(--sm);
+            width: 100%;
+            display: block;
+            line-height: var(--md);
+            margin: var(--sm);
+        }
+
+        &.one, &.two, &.three{
+            &:before{
+                position: absolute;
+                font-size: 4em;
+                top: -0.25em;
+                left: -0.25em;
+                opacity: .25;
+                color: var(--third-color);
+            }
+        }
+
+        &.one{
+            &:before{
+                content: '01';
+            }
+        }
+        &.two{
+            &:before{
+                content: '02';
+            }
+        }
+        &.three{
+            &:before{
+                content: '03';
+            }
+        }
+    }
+}

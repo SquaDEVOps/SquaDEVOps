@@ -1,0 +1,68 @@
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--borders);
+    max-width: 210px;
+
+    svg{
+        max-height: 60px;
+        width: 150px;
+    }
+
+    &.unpad{
+        padding: 0 !important;
+    }
+
+    &.default{
+        color:var(--primary-color);
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    &.outline{
+        transition: var(--fast);
+        border:2px solid;
+
+        &.current{
+            &:hover{
+                transition: var(--fast);
+                background: var(--fifth-color);
+                border-color: var(--fifth-color);
+                color:white;
+            }    
+        }
+
+        &:hover{
+            transition: var(--fast);
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color:white;
+        }
+
+        &.lead{
+
+            &.active{
+                transition: var(--fast);
+                background: var(--success);
+                border-color: var(--success);
+                color:var(--primary-color);
+
+                padding: var(--sm) calc(var(--lg) * 2);
+
+                &:hover{
+                    transition: var(--fast);
+                    background: var(--primary-color);
+                    border-color: var(--primary-color);
+                    color:var(--success);
+                }
+            }
+
+            &:hover{
+                transition: var(--fast);
+                background: var(--success);
+                border-color: var(--success);
+                color:var(--primary-color);
+            }
+        }
+    }
+}
