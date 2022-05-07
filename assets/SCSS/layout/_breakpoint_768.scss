@@ -198,7 +198,17 @@
     padding: calc(var(--space-sm) * 4);
 
     &.modal{
+
+        &.active{
+            padding: calc(var(--space-sm) * 4);
+        }
+
         &.dev{
+
+            .close{
+                max-width: var(--sm);
+            }
+
             .action-content{
                 transform: translate(0, 0);
             }
