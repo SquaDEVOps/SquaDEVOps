@@ -425,3 +425,34 @@
         margin: 0 7vw 0 auto;
     }
 }
+
+
+.three-cards {
+    position: relative;
+    .card{
+        transition: var(--normal);
+
+        &:hover {
+
+            transition: var(--normal);
+
+            position: absolute;
+            z-index: 9;
+            width: 100%;
+            height: 156%;
+            bottom: 0;
+
+            .card-subtitle {
+                height: auto;
+                font-size: var(--sm);
+            }
+            &:after {
+                transition: var(--normal);
+                bottom: -10%;
+            }
+        }
+        &:after{
+            height: 70%;
+        }
+    }
+}
