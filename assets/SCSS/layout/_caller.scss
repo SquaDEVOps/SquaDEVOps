@@ -5,12 +5,4 @@
 @import './card';
 
 //BREAKPOINTS CONCEPT
-@media only screen and (max-width:1550px){
-    @import './breakpoint_1366';
-}
-
-@media only screen and (max-width:1285px){
-    @import './breakpoint_1280';
-}
-
-@import './breakpoint_922';
+@import './breakpoints_caller';
