@@ -1,0 +1,64 @@
+.login-form, .makepay-controller, .payment-controller{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-weight: normal;
+    }
+    form{
+        padding: var(--space-md);
+        background: var(--primary-color);
+        .field-container{
+            input{
+                background: white;
+                padding: var(--space-sm);
+                margin-bottom: var(--space-sm);
+            }
+
+            button{
+                padding: var(--space-sm);
+                background: var(--sixth-color);
+                color: var(--primary-color);
+                width: 100%;
+            }
+        }
+    }
+}
+
+.makepay-controller, .payment-controller{
+    flex-direction: column;
+    h1{
+        font-size: 150%;
+    }
+    form{
+        width: 35%;
+        .field-container{
+            input{
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width:992px){
+            width: 100%;
+        }
+    }
+}
+
+.payment-controller{
+    justify-content: space-around;
+    .payment-content {
+        padding: var(--space-md);
+        text-align: center;
+        width: calc(300px + var(--space-md));
+        
+        .contract, .project, .price{
+            display: flex;
+            justify-content: space-between;
+            strong{
+                margin-left: var(--space-md);
+            }
+        }
+    }
+}
