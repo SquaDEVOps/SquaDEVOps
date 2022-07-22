@@ -48,7 +48,17 @@
 
 .payment-controller{
     justify-content: space-around;
-    .payment-content {
+
+    .logo{
+        transition: all .45s;
+        color: var(--third-color);
+        &.active{
+            transition: all .5s;
+            color: var(--success);
+        }
+    }
+
+    .payment-content, .redirect-container {
         padding: var(--space-md);
         text-align: center;
         width: calc(300px + var(--space-md));
@@ -60,5 +70,16 @@
                 margin-left: var(--space-md);
             }
         }
+    }
+}
+
+.redirect-container{
+    .message{
+        font-size: 80%;
+    }
+    .btn{
+        max-width: 100%;
+        margin-top: var(--space-md);
+        text-decoration: none;
     }
 }
