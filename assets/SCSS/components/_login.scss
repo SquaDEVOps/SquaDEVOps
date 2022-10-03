@@ -83,3 +83,82 @@
         text-decoration: none;
     }
 }
+
+.makepay-controller{
+    form{
+        &.makepay{
+            .field-container{
+                label{
+                    height: 46px;
+                    width: 10px;
+                    position: absolute;
+                    color:white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(255, 255, 255, .07);
+                    svg{
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
+    
+                input{
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
+}
+
+.login-form, .makepay-controller{
+    flex-direction: column;
+
+    form{
+        background: transparent;
+        .field-container{
+            position: relative;
+            background: transparent;
+
+            label{
+                height: 46px;
+                width: 35px;
+                position: absolute;
+                color:white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, .07);
+                svg{
+                    height: 15px;
+                    width: 15px;
+                }
+            }
+
+            input{
+                background: var(--primary-color);
+                color: white;
+                border-radius: var(--borders);
+                padding-left: 46px;
+                &::placeholder{
+                    color: white;
+                }
+            }
+
+            button{
+                transition: var(--slow);
+                border-radius: var(--borders);
+                &:hover{
+                    transition: var(--slow);
+                    background: var(--primary-color);
+                    color: var(--sixth-color);
+                }
+            }
+        }
+    }
+
+    a{
+        color: var(--primary-color);
+        width: 150px;
+    }
+}
