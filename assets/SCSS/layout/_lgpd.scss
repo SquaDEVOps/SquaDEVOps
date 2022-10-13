@@ -31,7 +31,7 @@
         flex-wrap: wrap;
 
         span, button{
-            font-family: var(--font-roboto);
+            font-family: var(--font-name);
             font-size: var(--sm);
             margin: 0;
             padding: 0;
@@ -73,7 +73,7 @@
     z-index: 99;
 
     p, span, button, strong{
-        font-family: var(--font-roboto);
+        font-family: var(--font-name);
         font-size: var(--sm);
     }
 

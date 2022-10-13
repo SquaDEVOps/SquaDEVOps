@@ -26,44 +26,60 @@
     .nav-content{
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 0 var(--space-lg);
         .logo{
-            max-width: 80px;
-            svg{
-                color: var(--primary-color);
+            .title{
+                text-decoration: none;
+                font-family: new-order, sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                text-transform: uppercase;
             }
         }
         .menu{
+            margin: 0 auto;
             .list-menu{
                 display: flex;
                 .menu-item{
                     transition: var(--fast);
                     margin: 0 var(--space-md);
                     &:hover{
-                        transition: var(--fast);
-                        color: var(--third-color);
+                        span{
+                            transition: var(--fast);
+                            font-weight: 500;
+                            color: var(--fifth-color);
+                        }
                     }
                 }
             }
         }
         .action{
             display: flex;
+            margin: 0 0 0 auto;
+            padding: 0 var(--space-lg);
             .btn{
                 font-size: 90%;
                 margin: 0 calc(var(--space-sm) / 2);
             }
         }
-        .languages{
-            .lang{
-                max-width: 30px;
-                max-height: 30px;
-                transition: var(--fast);
+    }
+}
 
-                &:hover{
-                    transition: var(--fast);
-                    transform: rotate(-10deg);
-                }
-            }
+.languages{
+    position: fixed;
+    left: 0;
+    top: calc(65px + var(--space-sm));
+    padding: 0 0 0 var(--space-sm);
+    z-index: 2;
+    .lang{
+        max-width: 20px;
+        max-height: 20px;
+        transition: var(--fast);
+
+        &:hover{
+            transition: var(--fast);
+            transform: rotate(-10deg);
         }
     }
 }

@@ -1,23 +1,28 @@
 .faq-controller{
 
+    height: 100vh;
     padding: 0 calc(var(--space-lg) * 4); 
     position: relative;
-
-    .joystick-controller{
-        position: absolute;
-        left: 50vw;
-        top: -5vh;
-        transform: rotate(15deg);
-        width: 40vw;
-        opacity: .03;
-        z-index: 0;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F7F8FA;
 
     .title{
         span{
-            font-family: var(--font-roboto);
+            font-family: var(--font-name);
+            color: var(--text-color);
             font-size: calc(var(--lg) * 1.5);
-            font-weight: bold;
+            font-weight: 500;
+        }
+    }
+    
+    .subtitle{
+        span{
+            color: var(--subtext-color);
+            font-size: var(--sm);
+            font-weight: 500;
         }
     }
 
@@ -28,7 +33,7 @@
                     &-pt, &-en{
                         .question-unique{
                             .question, .answer{
-                                font-family: var(--font-bebas);
+                                font-family: var(--font-name);
                                 font-size: var(--lg);
                             }
 
@@ -79,54 +84,98 @@
         }
     }
 
-    .faq-list{
+    .faq-presentation{
         display: flex;
-        flex-direction: column;
-        margin: var(--sm);
+        align-items: center;
+        justify-content: center;
 
-        .faq-loop{
-            &.notempty{
-                &-pt, &-en{
-                    .question-unique{
+        .faq-list, .faq-images{
+            flex: 1;
+        }
 
-                        margin: var(--space-sm) 0;
-                        cursor: pointer;
-                        user-select: none;
-
-                        .question, .answer{
-                            pointer-events: none;
-                            font-family: var(--font-roboto);
-                        }
-
-                        .question{
-                            font-size: var(--md);
-                            font-weight: bold;
-                        }
-
-                        &.expand{
-                            .answer{
-                                animation: expand-effect .45s forwards;
-                                max-height: 80px;
-                                overflow-y: auto;
-                                margin-top: var(--space-sm);
-                                font-size: var(--sm);
-                                pointer-events: fill;
-                                padding: var(--space-sm);
-                                border-left: 2px solid var(--third-color);
-                                display: flex;
-                                align-items: center;
-                                //justify-content: center;
-                                text-align: justify;
+        .faq-list{
+            display: flex;
+            flex-direction: column;
+            margin: var(--sm);
+    
+            .faq-loop{
+                &.notempty{
+                    &-pt, &-en{
+                        .question-unique{
+    
+                            margin: var(--space-sm) 0;
+                            cursor: pointer;
+                            user-select: none;
+    
+                            .question, .answer{
+                                pointer-events: none;
+                                font-family: var(--font-name);
                             }
-                        }
-
-                        .answer{
-                            height: 0;
-                            overflow: hidden;
+    
+                            .question{
+                                font-size: var(--md);
+                                font-weight: bold;
+                            }
+    
+                            &.expand{
+                                .answer{
+                                    animation: expand-effect .45s forwards;
+                                    max-height: 150px;
+                                    overflow-y: auto;
+                                    margin-top: var(--space-sm);
+                                    font-size: var(--sm);
+                                    pointer-events: fill;
+                                    padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-md);
+                                    border-left: 2px solid var(--fifth-color);
+                                    background: white;
+                                    color: var(--text-color);
+                                    border-radius: 0 10px 10px 0;
+                                    display: flex;
+                                    align-items: center;
+                                    //justify-content: center;
+                                    text-align: justify;
+                                    display: block;
+                                }
+                            }
+    
+                            .answer{
+                                height: 0;
+                                overflow: hidden;
+                            }
                         }
                     }
                 }
             }
         }
+
+        .faq-images{
+            position: relative;
+            height: 62vh;
+            right: calc(var(--space-lg) * -4);
+
+            .bubble{
+                position: absolute;
+                width: 55%;
+                height: auto;
+                top: calc(var(--space-md) * -2);
+                transform: translateX(95px);
+            }
+            .connection{
+                width: 70%;
+                position: absolute;
+                right: 0;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0px 12px 84px rgba(29, 41, 63, 0.119946);
+            }
+
+            .bitmap{
+                position: absolute;
+                width: 333px;
+                transform: translate(50px, 150px) rotate(-9deg);
+                overflow: hidden;
+            }
+        }
     }
+
 }

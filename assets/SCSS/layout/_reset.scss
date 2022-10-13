@@ -6,12 +6,12 @@
     -webkit-appearance: none;
 
     letter-spacing: 1px;
-    font-family: var(--font-bebas);
-    font-size: var(--lg);
+    font-family: var(--font-name);
+    //@error: var(--md);
 
-    @media only screen and (max-width:768px){
-        font-size: var(--md);
-    }
+    // @media only screen and (max-width:768px){
+    //     font-size: var(--sm);
+    // }
 
     list-style: none;
     border:0;
@@ -52,6 +52,19 @@
 a, button, input, .menu-item, .logo, .lang{
     cursor: pointer;
 }
+
+
+//EVERY TEXT 
+a, p, h1, h2, h3, h4, h5, h6, span {
+    color: var(--text-color);
+}
+
+.footer-controller{
+    a, p, h1, h2, h3, h4, h5, h6, span {
+        color: white;
+    }
+}
+
 
 h1{
     font-size:4em;

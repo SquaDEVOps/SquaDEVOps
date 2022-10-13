@@ -6,7 +6,7 @@
     //width: 250px;
     display: flex;
     flex-direction: column;
-    font-family: var(--font-roboto);
+    font-family: var(--font-name);
     z-index: 999;
 
     .notification{
@@ -22,7 +22,7 @@
         margin: calc(var(--space-sm) / 2) 0;
 
         p{
-            font-family: var(--font-roboto);
+            font-family: var(--font-name);
             color: var(--primary-color);
             font-size: var(--md);
         }

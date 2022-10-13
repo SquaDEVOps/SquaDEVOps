@@ -1,30 +1,35 @@
 .collab-controller{
     padding: var(--padding-container-md);
     text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     &.dev-page{
         .collab-list .collab-loop .collab-name{
-            font-family: var(--font-bebas);
+            font-family: var(--font-name);
         }
     }
 
     .title{
         span{
-            font-family: var(--font-roboto);
+            font-family: var(--font-name);
+            color: var(--text-color);
             font-size: calc(var(--lg) * 1.5);
-            font-weight: bold;
+            font-weight: 500;
         }
     }
     
     .subtitle{
         span{
-            font-family: var(--font-roboto);
-            padding-top: var(--space-md);
-            font-size: var(--md);
-            font-weight: normal;
-            width: 70%;
+            color: var(--subtext-color);
+            font-size: var(--sm);
+            font-weight: 500;
         }
     }
+
 
     .collab-list{
         display: flex;
@@ -47,7 +52,7 @@
             }
 
             .collab-name {
-                font-family: var(--font-roboto);
+                font-family: var(--font-name);
                 font-size: var(--sm);
                 margin-right: var(--space-sm);
                 user-select: none;
