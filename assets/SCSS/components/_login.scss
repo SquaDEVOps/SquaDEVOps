@@ -1,4 +1,4 @@
-.login-form, .makepay-controller, .payment-controller{
+.login-form, .payment-controller{
     height: 80vh;
     width: 100vw;
     display: flex;
@@ -11,10 +11,13 @@
         padding: var(--space-md);
         background: var(--primary-color);
         .field-container{
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+
             input{
                 background: white;
                 padding: var(--space-sm);
-                margin-bottom: var(--space-sm);
             }
 
             button{
@@ -22,12 +25,13 @@
                 background: var(--sixth-color);
                 color: var(--primary-color);
                 width: 100%;
+                max-height: 36px;
             }
         }
     }
 }
 
-.makepay-controller, .payment-controller{
+.payment-controller{
     flex-direction: column;
     h1{
         font-size: 150%;
@@ -84,34 +88,7 @@
     }
 }
 
-.makepay-controller{
-    form{
-        &.makepay{
-            .field-container{
-                label{
-                    height: 46px;
-                    width: 10px;
-                    position: absolute;
-                    color:white;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: rgba(255, 255, 255, .07);
-                    svg{
-                        height: 15px;
-                        width: 15px;
-                    }
-                }
-    
-                input{
-                    padding-left: 16px;
-                }
-            }
-        }
-    }
-}
-
-.login-form, .makepay-controller{
+.login-form{
     flex-direction: column;
 
     form{
