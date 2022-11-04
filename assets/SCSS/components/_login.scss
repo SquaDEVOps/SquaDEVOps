@@ -29,6 +29,83 @@
             }
         }
     }
+
+    
+    a{
+        svg{
+            fill: #1D293F;
+            &.loader{
+                animation: squad 5.5s infinite;
+            }
+        }
+    }
+}
+
+@keyframes squad{
+    0%{
+        transform: rotate(15deg);
+        fill: #1D293F;
+    }
+    10%{
+        transform: rotate(-15deg);
+        fill: transparent;
+        stroke-dashoffset: 5381.1px;
+        stroke-dasharray: 5381.1px;
+    }
+    20%{
+        transform: rotate(15deg);
+        fill: transparent;
+        stroke-dashoffset: 6881.1px;
+        stroke-dasharray: 6881.1px;
+    }
+    30%{
+        transform: rotate(10deg);
+        fill: transparent;
+        stroke-dashoffset: 7381.1px;
+        stroke-dasharray: 7381.1px;
+    }
+    40%{
+        transform: rotate(15deg);
+        fill: transparent;
+        stroke-dashoffset: 8381.1px;
+        stroke-dasharray: 8381.1px;
+    }
+    50%{
+        transform: rotate(5deg);
+        fill: transparent;
+        stroke-dashoffset: 15381.1px;
+        stroke-dasharray: 15381.1px;
+    }
+    60%{
+        transform: rotate(10deg);
+        fill: transparent;
+        stroke-dashoffset: 50381.1px;
+        stroke-dasharray: 50381.1px;
+    }
+    70%{
+        transform: rotate(0deg);
+        fill: transparent;
+        stroke-dashoffset: 9000px;
+        stroke-dasharray: 9000px;
+    }
+    80%{
+        transform: rotate(0deg);
+        fill: transparent;
+        stroke-dashoffset: 3000px;
+        stroke-dasharray: 3000px;
+    }
+    90%{
+        transform: rotate(0deg);
+        fill: rgba(29, 41, 63, .1);
+        stroke-dashoffset: 0;
+        stroke-dasharray: 5000px;
+    }
+    100%{
+        transform: rotate(0deg);
+        fill: rgba(29, 41, 63, 1);
+        stroke-dashoffset: 0;
+        stroke-dasharray: 3000px;
+    }
 }
 
 .payment-controller{
