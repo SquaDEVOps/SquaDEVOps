@@ -27,7 +27,8 @@
         position: relative;
         .bubble{
             position: absolute;
-            left: 0;
+            transform: translateY(-150px);
+            left: -90px;
             width: 412px;
             height: 412px;
         }
@@ -36,6 +37,7 @@
                 position: relative;
                 z-index: 2;
                 filter: drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.15));
+                border-radius: 4px;
             }
         }
     }
