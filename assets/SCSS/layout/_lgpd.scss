@@ -103,13 +103,6 @@
     &.active{
         display: flex;
         flex-direction: column;
-        &.lgpd-page{
-            .privacy-policy{
-                width: 80vw;
-                max-height: 80vh;
-                border-radius: var(--borders);
-            }
-        }
     }
 
     .privacy-policy {

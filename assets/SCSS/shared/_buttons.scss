@@ -22,52 +22,6 @@
         }
     }
 
-    &.success{
-        transition: var(--fast);
-        background: var(--success);
-        border-color: var(--success);
-        border-width: 3px;
-        margin-right: var(--space-sm);
-        span{
-            color: var(--text-color);
-        }
-
-        &:hover{
-            transition: var(--fast);
-            background: var(--text-color);
-            border-color: var(--text-color);
-            color: var(--success);
-            span{
-                color: var(--success);
-            }
-        }
-    }
-
-    &.primary{
-        transition: var(--fast);
-        background: var(--text-color);
-        border-color: var(--text-color);
-        color: var(--success);
-        border-width: 3px;
-        margin-right: var(--space-sm);
-        span{
-            color: var(--success);
-        }
-
-
-        &:hover{
-            transition: var(--fast);
-            background: var(--success);
-            border-color: var(--success);
-            color: var(--text-color);
-
-            span{
-                color: var(--text-color);
-            }
-    
-        }
-    }
-
     &.outline{
         transition: var(--fast);
         border:2px solid;
