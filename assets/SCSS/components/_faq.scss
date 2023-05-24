@@ -1,0 +1,181 @@
+.faq-controller{
+
+    height: 100vh;
+    padding: 0 calc(var(--space-lg) * 4); 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F7F8FA;
+
+    .title{
+        span{
+            font-family: var(--font-name);
+            color: var(--text-color);
+            font-size: calc(var(--lg) * 1.5);
+            font-weight: 500;
+        }
+    }
+    
+    .subtitle{
+        span{
+            color: var(--subtext-color);
+            font-size: var(--sm);
+            font-weight: 500;
+        }
+    }
+
+    &.dev{
+        .faq-list{
+            .faq-loop{
+                &.notempty{
+                    &-pt, &-en{
+                        .question-unique{
+                            .question, .answer{
+                                font-family: var(--font-name);
+                                font-size: var(--lg);
+                            }
+
+                            .question{
+                                display: flex;
+                                align-items: center;
+
+                                .iconf {
+                                    transition: var(--slow);
+                                    display: block;
+                                    width: 30px;
+                                    height: 30px;
+                                    //background: var(--fifth-color);
+                                    border: 1px solid var(--primary-color);
+                                    border-radius: 100%;
+                                    padding: 0 var(--space-sm);
+                                    margin: 0 var(--space-sm);
+                                    position: relative;
+
+                                    svg{
+                                        transition: var(--slow);
+                                        height: 35px;
+                                        position: absolute;
+                                    }
+                                }
+                            }
+
+                            &.expand{
+                                .answer{
+                                    font-size: var(--md);
+                                }
+
+                                .question{
+                                    .iconf{
+                                        border-color: #43706f;
+                                        transition: var(--slow);
+                                        svg{
+                                            transition: var(--slow);
+                                            transform: rotate(15deg) translate(0, -10px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .faq-presentation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .faq-list, .faq-images{
+            flex: 1;
+        }
+
+        .faq-list{
+            display: flex;
+            flex-direction: column;
+            margin: var(--sm);
+    
+            .faq-loop{
+                &.notempty{
+                    &-pt, &-en{
+                        .question-unique{
+    
+                            margin: var(--space-sm) 0;
+                            cursor: pointer;
+                            user-select: none;
+    
+                            .question, .answer{
+                                pointer-events: none;
+                                font-family: var(--font-name);
+                            }
+    
+                            .question{
+                                font-size: var(--md);
+                                font-weight: bold;
+                            }
+    
+                            &.expand{
+                                .answer{
+                                    animation: expand-effect .45s forwards;
+                                    max-height: 150px;
+                                    overflow-y: auto;
+                                    margin-top: var(--space-sm);
+                                    font-size: var(--sm);
+                                    pointer-events: fill;
+                                    padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-md);
+                                    border-left: 2px solid var(--fifth-color);
+                                    background: white;
+                                    color: var(--text-color);
+                                    border-radius: 0 10px 10px 0;
+                                    display: flex;
+                                    align-items: center;
+                                    //justify-content: center;
+                                    text-align: justify;
+                                    display: block;
+                                }
+                            }
+    
+                            .answer{
+                                height: 0;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .faq-images{
+            position: relative;
+            height: 62vh;
+            right: calc(var(--space-lg) * -4);
+
+            .bubble{
+                position: absolute;
+                width: 55%;
+                height: auto;
+                top: calc(var(--space-md) * -2);
+                transform: translateX(95px);
+            }
+            .connection{
+                width: 70%;
+                position: absolute;
+                right: 0;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0px 12px 84px rgba(29, 41, 63, 0.119946);
+            }
+
+            .bitmap{
+                position: absolute;
+                width: 333px;
+                transform: translate(50px, 150px) rotate(-9deg);
+                overflow: hidden;
+            }
+        }
+    }
+
+}

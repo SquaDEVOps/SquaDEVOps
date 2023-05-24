@@ -1,0 +1,170 @@
+*{
+    padding:0;
+    margin:0;
+    //all:unset;
+    box-sizing: border-box; //leva em conta soma do margin e padding da width total da div
+    -webkit-appearance: none;
+
+    letter-spacing: 1px;
+    font-family: var(--font-name);
+    //@error: var(--md);
+
+    // @media only screen and (max-width:768px){
+    //     font-size: var(--sm);
+    // }
+
+    list-style: none;
+    border:0;
+    background:transparent;
+
+    &:focus{
+      outline:unset;
+    }
+
+    &::-webkit-scrollbar{
+        width: 1px;
+        height: 1px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: var(--second-color);
+        border-radius: 0;
+    }
+
+    &::-webkit-scrollbar-thumb:hover{
+        background: var(--third-color);
+    }
+
+    &::-webkit-scrollbar-track{
+        background: transparent;
+        border-radius: 0px;
+        //box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+    }
+
+    &:focus{
+        outline: none;
+        transition: var(--fast);
+    }
+
+}
+
+//EVERY POINTER
+a, button, input, .menu-item, .logo, .lang{
+    cursor: pointer;
+}
+
+
+//EVERY TEXT 
+a, p, h1, h2, h3, h4, h5, h6, span {
+    color: var(--text-color);
+}
+
+.footer-controller{
+    a, p, h1, h2, h3, h4, h5, h6, span {
+        color: white;
+    }
+}
+
+
+h1{
+    font-size:4em;
+}
+
+h2{
+    font-size:3.5em;
+}
+
+h3{
+    font-size:3em;
+}
+
+h4{
+    font-size: 3.5em;
+}
+
+h5{
+    font-size: 2em;
+}
+
+h6 {
+    font-size: 1.5em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+head > title{
+    display:none;
+}
+
+i{
+    font-size: calc(var(--md) * 2);
+    cursor: pointer;
+
+    &.icon-controller{
+        width:40px;
+        height: 40px;
+        display: flex;
+    }
+
+    &:hover{
+        transition: var(--fast);
+        transform: scale(1.1);
+    }
+}
+
+svg, img{
+    width: 100%;
+    height: auto;
+}
+
+.unview{
+    display:none !important;
+}
+
+.view{
+    display:flex !important;
+}
+
+.divider{
+    background: var(--second-color);
+    height: 1px;
+    width: 100%;
+    margin: var(--md) 0;
+}
+
+
+.pre-loading{
+    transition: var(--fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    background:linear-gradient(45deg, #b5b5b5, #e8e8e8, #ffffff, #ffffff6e, #d9d9d9, #ffffff);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 6s ease infinite;
+
+    border: 1px solid #efefef;
+    border-radius: var(--borders);
+
+    &.active{
+        opacity: 1;
+        height: 40vh;
+        overflow: visible;
+    }
+
+    svg{
+        width: 50%;
+        height: 50%;
+        opacity: .05;
+        margin: auto;
+    }
+}
+
+.menu-burger{
+    display: none;
+}

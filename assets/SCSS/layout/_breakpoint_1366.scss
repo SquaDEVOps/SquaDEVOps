@@ -1,0 +1,103 @@
+.quests-controller{
+    .quest-loop{
+        flex-wrap: wrap;
+    }
+}
+
+.leads-controller {
+    .action-content {
+        form {
+            width: 100%;
+        }
+    }
+}
+
+
+.faq-controller {
+    .faq-list {
+        .faq-loop{
+            &.notempty{
+                &-pt, &-en{
+                    .question-unique{
+                        &.expand{
+                            .answer{
+                                max-height: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.box-slider {
+    width: 75%;
+}
+
+
+.devcases-controller {
+    .rank-controller {
+        .level-rank {
+            .rank-points{
+                width: 180px;
+                height: 6px;
+            }
+        }
+    }
+}
+
+
+.quests-controller {
+    .quest-loop {
+        .quest-unique{
+            &.empty{
+                &-pt, &-en{
+                    margin: calc(var(--space-sm) / 2);
+                    width: 215px;
+                    height: 215px;
+
+                    .card-controller{
+
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        
+                        .action-quest{
+                            transform: scale(.7);
+                        }
+
+                        .quest-data{
+                            transform: translateY(130px) scale(.7);
+                        }
+
+                        &:hover{
+                            .quest-data{
+                                transform: translateY(0) translateX(-35px) scale(.7);
+                            }
+
+                            .action-quest{
+                                transform: scale(0.45) translate(115px, 225px);
+                                img{
+                                    &.dragon, &.castle, &.gate{
+                                        image-rendering: pixelated;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes expand-effect {
+    100%{
+        height: 150px;
+    }
+}

@@ -1,0 +1,44 @@
+
+.bubble, .square, .faq-images, .arrow{
+    display: none;
+}
+
+.leads-controller{
+    &.leads{
+        display: block;
+    }
+}
+
+.story-controller .story-card.one:before, .story-controller .story-card.two:before, .story-controller .story-card.three:before{
+    width: 47px;
+    height: 47px;
+    font-size: var(--md);
+    position: relative;
+}
+
+.introduce-controller{
+    height: 74vh;
+    justify-content: flex-start;
+    .presentation-image{
+        position: absolute;
+        bottom: 103px;
+    }
+}
+
+.case-controller{
+    height: 40vh;
+    .case-list{
+        .case-loop{
+            .case-image{
+                img{
+                    max-width: 60px;
+                }
+            }
+        }
+    }
+}
+
+
+.case-controller, .introduce-two-controller, .future-controller, .story-section, .faq-controller, .leads-controller.leads, .collab-controller{
+    height: auto;
+}

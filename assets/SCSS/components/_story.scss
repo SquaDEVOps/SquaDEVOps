@@ -1,0 +1,93 @@
+.story-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        font-size: calc(var(--lg) * 1.5);
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    .subtitle {
+        padding-top: var(--space-md);
+        color: var(--subtext-color);
+        font-size: var(--sm);
+        font-weight: 500;
+        width: 70%;
+    }
+}
+.story-controller{
+    display:flex;
+    //align-items: center;
+    justify-content: center;
+    padding: calc(var(--space-lg) * 4) calc(var(--space-lg) * 4) calc(var(--space-lg) * 2) calc(var(--space-lg) * 4); 
+    .story-card{
+        padding: var(--space-md) var(--space-lg);
+        position: relative;
+        flex: 1;
+
+        p{
+            padding: 0 var(--space-lg);
+        }
+
+        .arrow{
+            width: 50%;
+            position: absolute;
+            right: 0;
+            bottom: calc(var(--space-md) * -1);
+            transform: rotate(-15deg);
+        }
+
+        .short-title{
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+        .subtitle{
+            font-size: var(--sm);
+            width: 100%;
+            display: block;
+            line-height: var(--md);
+            margin: var(--sm);
+        }
+
+        &.one, &.two, &.three{
+            &:before{
+                position: absolute;
+                font-size: var(--lg);
+                top: -1.25em;
+                left: -1.25em;
+                color: white;
+                width: 67px;
+                height: 67px;
+                background: var(--fifth-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 32px 54px rgba(37, 138, 255, 0.224553);
+                border-radius: 10px;
+            }
+        }
+
+        &.one{
+            &:before{
+                content: '01';
+            }
+        }
+        &.two{
+            margin-top: var(--space-lg);
+            &:before{
+                content: '02';
+            }
+        }
+        &.three{
+            margin-top: calc(var(--space-lg) * 2);
+            &:before{
+                content: '03';
+            }
+        }
+    }
+}

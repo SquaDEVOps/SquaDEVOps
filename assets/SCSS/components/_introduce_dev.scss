@@ -1,0 +1,62 @@
+.introduce-dev-controller{
+
+    padding: var(--padding-container);
+    height: calc(100vh - calc(var(--space-lg) * 2.70));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .dev-information{
+        padding: 0 var(--space-md) 0 0;
+    }
+
+    .message{
+        .title{
+            span{
+                font-size: var(--xl);
+                &.sub{
+                    display: block;
+                    font-size: var(--lg);
+                }
+
+                &.xp-letter{
+                    font-size: calc(var(--xl) * 1.25);
+                    color: white;
+                    filter: drop-shadow(2px 4px 6px var(--fifth-color)) drop-shadow(4px 5px 5px var(--success));
+                }
+
+                &.lettering{
+                    font-size: calc(var(--xl) * 1.25);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .subtitle{
+            margin-bottom: var(--space-md);
+            span{
+                color: var(--third-color);
+            }
+        }
+    }
+
+    .dev-animated{
+        width: calc(50% - 19.75px);
+    }
+
+    .squadevops-levelup{
+        span{
+            font-size: var(--xl);
+            font-weight: bold;
+            display: block;
+            letter-spacing: 1px;
+
+            &.plus{
+                color: white;
+                letter-spacing: 2px;
+                filter: drop-shadow(2px 4px 6px var(--fifth-color)) drop-shadow(4px 5px 5px var(--success));
+            }
+        }
+    }
+
+}

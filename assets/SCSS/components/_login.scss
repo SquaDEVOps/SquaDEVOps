@@ -1,0 +1,218 @@
+.login-form, .payment-controller{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-weight: normal;
+    }
+    form{
+        padding: var(--space-md);
+        background: var(--primary-color);
+        .field-container{
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+
+            input{
+                background: white;
+                padding: var(--space-sm);
+            }
+
+            button{
+                padding: var(--space-sm);
+                background: var(--sixth-color);
+                color: var(--primary-color);
+                width: 100%;
+                max-height: 36px;
+            }
+        }
+    }
+
+    
+    a{
+        svg{
+            fill: #1D293F;
+            &.loader{
+                animation: squad 5.5s infinite;
+            }
+        }
+    }
+}
+
+@keyframes squad{
+    0%{
+        transform: rotate(15deg);
+        fill: #1D293F;
+    }
+    10%{
+        transform: rotate(-15deg);
+        fill: transparent;
+        stroke-dashoffset: 5381.1px;
+        stroke-dasharray: 5381.1px;
+    }
+    20%{
+        transform: rotate(15deg);
+        fill: transparent;
+        stroke-dashoffset: 6881.1px;
+        stroke-dasharray: 6881.1px;
+    }
+    30%{
+        transform: rotate(10deg);
+        fill: transparent;
+        stroke-dashoffset: 7381.1px;
+        stroke-dasharray: 7381.1px;
+    }
+    40%{
+        transform: rotate(15deg);
+        fill: transparent;
+        stroke-dashoffset: 8381.1px;
+        stroke-dasharray: 8381.1px;
+    }
+    50%{
+        transform: rotate(5deg);
+        fill: transparent;
+        stroke-dashoffset: 15381.1px;
+        stroke-dasharray: 15381.1px;
+    }
+    60%{
+        transform: rotate(10deg);
+        fill: transparent;
+        stroke-dashoffset: 50381.1px;
+        stroke-dasharray: 50381.1px;
+    }
+    70%{
+        transform: rotate(0deg);
+        fill: transparent;
+        stroke-dashoffset: 9000px;
+        stroke-dasharray: 9000px;
+    }
+    80%{
+        transform: rotate(0deg);
+        fill: transparent;
+        stroke-dashoffset: 3000px;
+        stroke-dasharray: 3000px;
+    }
+    90%{
+        transform: rotate(0deg);
+        fill: rgba(29, 41, 63, .1);
+        stroke-dashoffset: 0;
+        stroke-dasharray: 5000px;
+    }
+    100%{
+        transform: rotate(0deg);
+        fill: rgba(29, 41, 63, 1);
+        stroke-dashoffset: 0;
+        stroke-dasharray: 3000px;
+    }
+}
+
+.payment-controller{
+    flex-direction: column;
+    h1{
+        font-size: 150%;
+    }
+    form{
+        width: 35%;
+        .field-container{
+            input{
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width:992px){
+            width: 100%;
+        }
+    }
+}
+
+.payment-controller{
+    justify-content: space-around;
+
+    .logo{
+        transition: all .45s;
+        color: var(--third-color);
+        &.active{
+            transition: all .5s;
+            color: var(--success);
+        }
+    }
+
+    .payment-content, .redirect-container {
+        padding: var(--space-md);
+        text-align: center;
+        width: calc(300px + var(--space-md));
+        
+        .contract, .project, .price{
+            display: flex;
+            justify-content: space-between;
+            strong{
+                margin-left: var(--space-md);
+            }
+        }
+    }
+}
+
+.redirect-container{
+    .message{
+        font-size: 80%;
+    }
+    .btn{
+        max-width: 100%;
+        margin-top: var(--space-md);
+        text-decoration: none;
+    }
+}
+
+.login-form{
+    flex-direction: column;
+
+    form{
+        background: transparent;
+        .field-container{
+            position: relative;
+            background: transparent;
+
+            label{
+                height: 46px;
+                width: 35px;
+                position: absolute;
+                color:white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, .07);
+                svg{
+                    height: 15px;
+                    width: 15px;
+                }
+            }
+
+            input{
+                background: var(--primary-color);
+                color: white;
+                border-radius: var(--borders);
+                padding-left: 46px;
+                &::placeholder{
+                    color: white;
+                }
+            }
+
+            button{
+                transition: var(--slow);
+                border-radius: var(--borders);
+                &:hover{
+                    transition: var(--slow);
+                    background: var(--primary-color);
+                    color: var(--sixth-color);
+                }
+            }
+        }
+    }
+
+    a{
+        color: var(--primary-color);
+        width: 150px;
+    }
+}

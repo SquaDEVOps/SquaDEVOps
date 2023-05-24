@@ -1,0 +1,85 @@
+.nav-controller{
+    padding: var(--space-sm);
+    //PREVENTS USE HOSTLISTENER
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: white;
+    box-shadow:1px 1px 25px 0px rgba(0, 0, 0, 0.15);
+
+    &.dev{
+        .nav-content{
+            .menu{
+                .list-menu{
+                    .menu-item{
+                        &:hover{
+                            transition: var(--fast);
+                            color: var(--fifth-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--space-lg);
+        .logo{
+            .title{
+                text-decoration: none;
+                font-family: new-order, sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                text-transform: uppercase;
+            }
+        }
+        .menu{
+            margin: 0 auto;
+            .list-menu{
+                display: flex;
+                .menu-item{
+                    transition: var(--fast);
+                    margin: 0 var(--space-md);
+                    &:hover{
+                        span{
+                            transition: var(--fast);
+                            font-weight: 500;
+                            color: var(--fifth-color);
+                        }
+                    }
+                }
+            }
+        }
+        .action{
+            display: flex;
+            margin: 0 0 0 auto;
+            padding: 0 var(--space-lg);
+            .btn{
+                font-size: 90%;
+                margin: 0 calc(var(--space-sm) / 2);
+            }
+        }
+    }
+}
+
+.languages{
+    position: fixed;
+    left: 0;
+    top: calc(65px + var(--space-sm));
+    padding: 0 0 0 var(--space-sm);
+    z-index: 2;
+    .lang{
+        max-width: 20px;
+        max-height: 20px;
+        transition: var(--fast);
+
+        &:hover{
+            transition: var(--fast);
+            transform: rotate(-10deg);
+        }
+    }
+}
