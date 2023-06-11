@@ -1,0 +1,40 @@
+._cursor_player {
+  transition: all .25s ease-in-out;
+  position: absolute;
+  background: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span{
+    display: block;
+    transform: translateY(-25px);
+    font-size: 12px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  textarea{
+    --webkit-appearance: none;
+    border: 0;
+    position: absolute;
+    opacity: .25;
+    resize: none;
+    font-size: 12px;
+    font-weight: bold;
+    background: #f2f2f2;
+    border-radius: 4px;
+
+    transition: all .25s ease-in-out;
+
+    &:focus{
+      opacity: 1;
+      border: 2px solid;
+    }
+  }
+}
